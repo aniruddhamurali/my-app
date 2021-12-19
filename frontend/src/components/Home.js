@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import {Container, Row, Col} from 'react-bootstrap';
 import p5 from "p5";
 import '../App.css';
 //import "typeface-lato";
@@ -95,24 +96,31 @@ class Home extends Component {
         const textStyle = {
             fontFamily: "Lato",
             textAlign: 'center',
-            marginLeft: "20%",
-            marginRight: "20%",
-            paddingTop: "20px",
-            paddingBottom:"20px",
-            color: "white"
+            color: "white",
+            lineHeight: "50%",
+            margin: "auto",
         };
+
+
         return (
             <div style={{backgroundColor: "black"}}>
                 <div ref={this.myRef}></div>
-                <div style={textStyle}>
-                    <h2>Hey!</h2>
-                    <h5>
-                        Welcome to my website! I'm currently a computer science student at 
-                        Georgia Tech with specializations in AI and People. My mission is to 
-                        create technologies that have real-world impact. Here's my background 
-                        and experience that got me to where I am today:
-                    </h5>
-                </div>
+                <Container style={{padding: "50px"}}>
+                    <Row>
+                        <Col xs={12} md={4}>
+                            <img src="./images/aniruddha.JPG" alt=""/>
+                        </Col>
+                        <Col xs={12} md={8} style={textStyle}>
+                            <h1>Hey!</h1>
+                            <h4>
+                                Welcome to my website! I'm currently a computer science student at 
+                                Georgia Tech with specializations in AI and People. My mission is to 
+                                create technologies that have real-world impact. Here's my background 
+                                and experience that got me to where I am today:
+                            </h4>
+                        </Col>
+                    </Row>
+                </Container>
             </div>
         )
     }
