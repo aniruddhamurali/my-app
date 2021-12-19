@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import p5 from "p5";
+import '../App.css';
+//import "typeface-lato";
 
 class Home extends Component {
     constructor(props){
@@ -11,14 +13,25 @@ class Home extends Component {
     Sketch = (p) => {
         var snowflakes = [];
 
+        let myFont;
+        p.preload = () => {
+            myFont = p.loadFont('./fonts/Lato-Bold.ttf');
+        }
+
         p.setup = () => {
             p.createCanvas(window.innerWidth, window.innerHeight);
             p.fill(240);
             p.noStroke();
+            p.textAlign(p.CENTER, p.CENTER);
+            p.textSize(64);
+            p.textFont(myFont);
+            
+            //p.textStyle(p.BOLD);
         }
     
         p.draw = () => {
-            p.background('brown');
+            //p.background('brown');
+            p.background(p.color(50, 50, 200));
             let t = p.frameCount / 60; // update time
 
             // create a random number of snowflakes each frame
@@ -31,6 +44,8 @@ class Home extends Component {
                 flake.update(t); // update snowflake position
                 flake.display(); // draw snowflake
             }
+
+            p.text('Aniruddha Murali', window.innerWidth/2, window.innerHeight/2 * 4/5);
         }
 
         // snowflake class
@@ -77,9 +92,27 @@ class Home extends Component {
     
 
     render() {
+        const textStyle = {
+            fontFamily: "Lato",
+            textAlign: 'center',
+            marginLeft: "20%",
+            marginRight: "20%",
+            paddingTop: "20px",
+            paddingBottom:"20px",
+            color: "white"
+        };
         return (
-            <div>
+            <div style={{backgroundColor: "black"}}>
                 <div ref={this.myRef}></div>
+                <div style={textStyle}>
+                    <h2>Hey!</h2>
+                    <h5>
+                        Welcome to my website! I'm currently a computer science student at 
+                        Georgia Tech with specializations in AI and People. My mission is to 
+                        create technologies that have real-world impact. Here's my background 
+                        and experience that got me to where I am today:
+                    </h5>
+                </div>
             </div>
         )
     }

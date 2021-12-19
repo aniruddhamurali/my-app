@@ -1,4 +1,5 @@
 import './App.css';
+//import "typeface-lato";
 
 import React from 'react';
 import {
@@ -37,15 +38,15 @@ function App() {
         <Styles>
           <Navbar bg="dark" expand="lg">
             <Container>
-              <Navbar.Brand href="/">Aniruddha Murali</Navbar.Brand>
+              <Navbar.Brand style={{fontFamily:"Lato"}} href="/">Aniruddha Murali</Navbar.Brand>
               <Navbar.Toggle aria-controls="basic-navbar-nav" />
               <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="me-auto">
                   <Nav.Item>
-                    <Nav.Link href="/">Home</Nav.Link>
+                    <Nav.Link style={{fontFamily:"Lato"}} href="/">Home</Nav.Link>
                   </Nav.Item>
                   <Nav.Item>
-                    <Nav.Link href="/about">About</Nav.Link>
+                    <Nav.Link style={{fontFamily:"Lato"}} href="/about">About</Nav.Link>
                   </Nav.Item>
                 </Nav>
               </Navbar.Collapse>
