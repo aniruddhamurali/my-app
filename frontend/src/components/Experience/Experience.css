@@ -3,15 +3,21 @@
     font-family: "Lato";
 }
 
-.header {
-    text-align: center;
-}
-
 .imageCol {
     text-align: right;
 }
 
 .image {
     border-radius: 5%;
-    width: 250px;
+    width: 150px;
+}
+
+.company {
+    color: #30B2FF;
+}
+
+hr {
+    width: 50%;
+    margin: 0 auto;
+    color: #30B2FF
 }

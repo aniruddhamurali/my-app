@@ -3,6 +3,7 @@ import {Container, Row, Col} from 'react-bootstrap';
 import p5 from "p5";
 import Experience from '../Experience';
 import experiences from '../../constants/experiences';
+import "./Home.css"
 //import "typeface-lato";
 
 class Home extends Component {
@@ -17,7 +18,7 @@ class Home extends Component {
 
         let myFont;
         p.preload = () => {
-            myFont = p.loadFont('./fonts/Lato-Bold.ttf');
+            myFont = p.loadFont('./fonts/Lato-Black.ttf');
         }
 
         p.setup = () => {
@@ -33,7 +34,7 @@ class Home extends Component {
     
         p.draw = () => {
             //p.background('brown');
-            p.background(p.color(50, 50, 200));
+            p.background(p.color(48, 178, 255));
             let t = p.frameCount / 60; // update time
 
             // create a random number of snowflakes each frame
@@ -109,19 +110,43 @@ class Home extends Component {
             height: "250px",
             display: "block",
             marginLeft: "auto",
+            marginRight: "0",
+        }
+
+        const img2Style = {
+            objectFit: "cover",
+            borderRadius: "50%",
+            width: "250px",
+            height: "250px",
+            display: "block",
+            marginLeft: "auto",
             marginRight: "auto",
         }
 
-
+        // #30B2FF
         return (
             <div>
-                <div style={{backgroundColor: "#446FFF"}} ref={this.myRef}></div>
-                <Container style={{padding: "50px", backgroundColor: "#446FFF"}} fluid>
+                <div style={{backgroundColor: "rgb(50, 50, 200)"}} ref={this.myRef}></div>
+                <Container style={{padding: "50px", backgroundColor: "rgb(50, 50, 200)"}} fluid>
+                    <img style={img2Style} src="./images/aniruddha.JPG" alt=""/>
+                    <br></br>
                     <Row>
-                        <Col xs={12} md={4}>
+                        <Col style={textStyle} xs={12} md={5}>
+                            <h2>Hey!</h2>
+                            <h5>
+                                Welcome to my website! I'm currently a computer science student at 
+                                Georgia Tech with specializations in AI and People. My mission is to 
+                                create technologies that have real-world impact. Here's my background 
+                                and experience that got me to where I am today:
+                            </h5>
+                        </Col>
+                    </Row>
+                    {/*}
+                    <Row>
+                        <Col xs={12} md={5}>
                             <img style={imgStyle} src="./images/aniruddha.JPG" alt=""/>
                         </Col>
-                        <Col xs={12} md={8} style={textStyle}>
+                        <Col xs={12} md={5} style={textStyle}>
                             <h1>Hey!</h1>
                             <h4>
                                 Welcome to my website! I'm currently a computer science student at 
@@ -131,8 +156,15 @@ class Home extends Component {
                             </h4>
                         </Col>
                     </Row>
+                    */}
                 </Container>
+                
                 <Container style={{backgroundColor: "#212529"}} fluid>
+                    <br></br>
+                    <br></br>
+                    <h1 className="header">———— Experience ————</h1>
+                    <br></br>
+                    <br></br>
                     {experiences.map((item, index) => (
                         <Experience 
                             name={item["name"]} 

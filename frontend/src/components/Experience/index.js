@@ -12,18 +12,13 @@ class Experience extends Component {
     render() {
         return (
             <Container className="container" fluid>
-                <br></br>
-                <br></br>
-                <h1 className="header">———— My Experience ————</h1>
-                <br></br>
-                <br></br>
                 <Row>
-                    <Col xs={12} md={5} className="imageCol">
+                    <Col xs={12} md={4} className="imageCol">
                         <img className="image" src={this.props.image} alt=""/>
                     </Col>
-                    <Col xs={12} md={5}>
-                        <h3>{this.props.name}</h3>
-                        <h5>{this.props.role}</h5>
+                    <Col xs={12} md={6}>
+                        <h3 className="company"><strong>{this.props.name}</strong></h3>
+                        <h5><strong>{this.props.role}</strong></h5>
                         <h6>{this.props.location}; {this.props.timeframe}</h6>
                         <br></br>
                         {this.props.tasks.map((item, index) => (
@@ -31,6 +26,11 @@ class Experience extends Component {
                         ))}
                     </Col>
                 </Row>
+                <br></br>
+                <br></br>
+                <hr></hr>
+                <br></br>
+                <br></br>
             </Container>    
         )
     }
