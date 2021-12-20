@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import {Container, Row, Col} from 'react-bootstrap';
 import p5 from "p5";
 import '../App.css';
+import Experience from './Experience';
+import experiences from '../constants/experiences';
 //import "typeface-lato";
 
 class Home extends Component {
@@ -103,9 +105,9 @@ class Home extends Component {
 
 
         return (
-            <div style={{backgroundColor: "black"}}>
-                <div ref={this.myRef}></div>
-                <Container style={{padding: "50px"}}>
+            <div>
+                <div style={{backgroundColor: "#446FFF"}} ref={this.myRef}></div>
+                <Container style={{padding: "50px", backgroundColor: "#446FFF"}} fluid>
                     <Row>
                         <Col xs={12} md={4}>
                             <img src="./images/aniruddha.JPG" alt=""/>
@@ -120,6 +122,17 @@ class Home extends Component {
                             </h4>
                         </Col>
                     </Row>
+                </Container>
+                <Container style={{backgroundColor: "#212529"}} fluid>
+                    {experiences.map((item, index) => (
+                        <Experience 
+                            name={item["name"]} 
+                            role={item["role"]} 
+                            location={item["location"]}
+                            timeframe={item["timeframe"]}
+                            tasks={item["tasks"]}
+                        />
+                    ))}
                 </Container>
             </div>
         )
