@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
 import {Container, Row, Col} from 'react-bootstrap';
 import p5 from "p5";
-import '../App.css';
-import Experience from './Experience';
-import experiences from '../constants/experiences';
+import Experience from '../Experience';
+import experiences from '../../constants/experiences';
 //import "typeface-lato";
 
 class Home extends Component {
@@ -140,6 +139,7 @@ class Home extends Component {
                             role={item["role"]} 
                             location={item["location"]}
                             timeframe={item["timeframe"]}
+                            image={item["image"]}
                             tasks={item["tasks"]}
                         />
                     ))}

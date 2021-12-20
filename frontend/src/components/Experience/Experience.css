@@ -1,0 +1,17 @@
+.container {
+    color: white;
+    font-family: "Lato";
+}
+
+.header {
+    text-align: center;
+}
+
+.imageCol {
+    text-align: right;
+}
+
+.image {
+    border-radius: 5%;
+    width: 250px;
+}
