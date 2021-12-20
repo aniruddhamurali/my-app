@@ -103,6 +103,16 @@ class Home extends Component {
             margin: "auto",
         };
 
+        const imgStyle = {
+            objectFit: "cover",
+            borderRadius: "50%",
+            width: "250px",
+            height: "250px",
+            display: "block",
+            marginLeft: "auto",
+            marginRight: "auto",
+        }
+
 
         return (
             <div>
@@ -110,7 +120,7 @@ class Home extends Component {
                 <Container style={{padding: "50px", backgroundColor: "#446FFF"}} fluid>
                     <Row>
                         <Col xs={12} md={4}>
-                            <img src="./images/aniruddha.JPG" alt=""/>
+                            <img style={imgStyle} src="./images/aniruddha.JPG" alt=""/>
                         </Col>
                         <Col xs={12} md={8} style={textStyle}>
                             <h1>Hey!</h1>
