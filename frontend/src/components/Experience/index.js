@@ -16,17 +16,18 @@ class Experience extends Component {
                     <Col xs={12} md={4} className="imageCol">
                         <img className="image" src={this.props.image} alt=""/>
                     </Col>
-                    <Col xs={12} md={6}>
+                    <Col xs={12} md={7}>
                         <h3 className="company"><strong>{this.props.name}</strong></h3>
                         <h5><strong>{this.props.role}</strong></h5>
                         <h6>{this.props.location}; {this.props.timeframe}</h6>
                         <br></br>
-                        {this.props.tasks.map((item, index) => (
-                            <li>{item}</li>
-                        ))}
+                        <ul>
+                            {this.props.tasks.map((item, index) => (
+                                <li>{item}</li>
+                            ))}
+                        </ul>
                     </Col>
                 </Row>
-                <br></br>
                 <br></br>
                 <hr></hr>
                 <br></br>

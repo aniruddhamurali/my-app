@@ -162,7 +162,7 @@ class Home extends Component {
                 <Container style={{backgroundColor: "#212529"}} fluid>
                     <br></br>
                     <br></br>
-                    <h1 className="header">———— Experience ————</h1>
+                    <h1 className="header"><strong>———— Experience ————</strong></h1>
                     <br></br>
                     <br></br>
                     {experiences.map((item, index) => (

@@ -9,7 +9,7 @@
 
 .image {
     border-radius: 5%;
-    width: 150px;
+    width: 200px;
 }
 
 .company {
@@ -20,4 +20,13 @@ hr {
     width: 50%;
     margin: 0 auto;
     color: #30B2FF
+}
+
+li {
+    padding-bottom: 10px;
+    padding-left: 5px;
+}
+
+ul {
+    list-style-type: square;
 }
