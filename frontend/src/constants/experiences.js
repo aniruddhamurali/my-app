@@ -46,6 +46,6 @@ const experiences = [
             "Built machine learning model (Python, Scikit-learn) and web dashboard to predict attendance of an International Champions Cup (ICC) match. Model predicted ~5700 seats closer to actual attendance than ICC’s expectations - could help increase revenue. Data analyzed in Excel and R."
         ]
     }
-]
+];
 
 export default experiences;

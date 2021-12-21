@@ -4,6 +4,7 @@ import p5 from "p5";
 
 import IntroContainer from '../IntroContainer';
 import ExperienceContainer from '../ExperienceContainer';
+import ProjectContainer from '../ProjectContainer';
 import "./Home.css"
 
 class Home extends Component {
@@ -100,6 +101,7 @@ class Home extends Component {
                 <div className="animation" ref={this.myRef}></div>
                 <IntroContainer></IntroContainer>
                 <ExperienceContainer></ExperienceContainer>
+                <ProjectContainer></ProjectContainer>
             </div>
         )
     }
