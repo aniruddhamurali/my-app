@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {Card, Col, Button} from 'react-bootstrap';
+import {Card, Col, Button, Collapse} from 'react-bootstrap';
 import './Project.css';
 
 
@@ -12,7 +12,7 @@ class Project extends Component {
 	}
 
     switchHover = (bool) => {
-        this.setState({hover: bool})
+        this.setState({hover: bool});
     }
 
     render() {
@@ -39,15 +39,17 @@ class Project extends Component {
         } else {
             return (
                 <Col onMouseLeave={() => this.switchHover(false)}>
-                    <Card 
-                        className="hovercard" 
-                        bg="dark"
-                    >
-                        <div className="hovertitlecontainer">
-                            <Card.Title className="hovertitle">{this.props.title}</Card.Title>
-                        </div>
-                        <Button className="hoverbutton" variant="primary">Learn more</Button>
-                    </Card>
+                    <Collapse in={true} dimension="width">
+                        <Card 
+                            className="hovercard" 
+                            bg="dark"
+                        >
+                            <div className="hovertitlecontainer">
+                                <Card.Title className="hovertitle">{this.props.title}</Card.Title>
+                            </div>
+                            <Button className="hoverbutton" variant="primary">Learn more</Button>
+                        </Card>
+                    </Collapse>
                 </Col>
             ); 
         }

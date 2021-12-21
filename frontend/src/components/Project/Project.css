@@ -18,8 +18,15 @@
 }
 
 .hovercard {
+    opacity: 0;
     margin-bottom: 10px;
     height: 23vw;
+    -webkit-transition: opacity 0.5s;
+    transition: opacity 0.5s;
+}
+
+.hovercard:hover {
+    opacity: 1;
 }
 
 .hovertitle {
