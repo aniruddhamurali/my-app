@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {CardGroup} from 'react-bootstrap';
+import {CardGroup, Row, Col} from 'react-bootstrap';
 
 import Project from '../Project';
 import projects from '../../constants/projects';
@@ -12,17 +12,23 @@ class ProjectContainer extends Component {
 	}
 
     render() {
-        console.log(projects[0]["image"]);
         return (
-            <CardGroup>
-                {projects.map((item, index) => (
-                    <Project
-                        title={item["title"]}
-                        description={item["description"]}
-                        image={item["image"]}
-                    />
-                ))}
-            </CardGroup>
+            <div className="projectcontainer">
+                <br></br>
+                <br></br>
+                <h1 className="header"><strong>———— Projects ————</strong></h1>
+                <br></br>
+                <br></br>
+                <Row xs={1} md={3} className="g-3 cardgroup">
+                    {projects.map((item, index) => (
+                        <Project
+                            title={item["title"]}
+                            description={item["description"]}
+                            image={item["image"]}
+                        />
+                    ))}
+                </Row>
+            </div>
         );
     }
 }

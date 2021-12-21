@@ -1,0 +1,13 @@
+.projectcontainer {
+    background-color: #1a1a1d;
+}
+
+.cardgroup {
+    margin: auto 100px;
+}
+
+.header {
+    text-align: center;
+    color: white;
+    font-family: "Lato";
+}
