@@ -16,3 +16,27 @@
 .card {
     margin-bottom: 10px;
 }
+
+.hovercard {
+    margin-bottom: 10px;
+    height: 23vw;
+}
+
+.hovertitle {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+    color: #30B2FF;
+    padding-top: 5vw;
+}
+
+.hovertitlecontainer {
+    display: table;
+}
+
+.hoverbutton {
+    width: 50%;
+    margin-top: 5vw;
+    margin-left: auto;
+    margin-right: auto;
+}

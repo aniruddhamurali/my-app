@@ -19,7 +19,7 @@ class ProjectContainer extends Component {
                 <h1 className="header"><strong>———— Projects ————</strong></h1>
                 <br></br>
                 <br></br>
-                <Row xs={1} md={3} className="g-3 cardgroup">
+                <Row sm={1} md={2} lg={3} className="g-3 cardgroup">
                     {projects.map((item, index) => (
                         <Project
                             title={item["title"]}

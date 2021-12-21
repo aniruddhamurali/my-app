@@ -1,31 +1,56 @@
 import React, { Component } from 'react';
-import {Card, Col} from 'react-bootstrap';
+import {Card, Col, Button} from 'react-bootstrap';
 import './Project.css';
 
 
 class Project extends Component {
     constructor(props){
 		super(props);
-		this.state = {};
+		this.state = {
+            hover: false
+        };
 	}
 
+    switchHover = (bool) => {
+        this.setState({hover: bool})
+    }
+
     render() {
-        return (
-            <Col>
-                <Card className="card" bg="dark">
-                    <Card.Img className="card-img" src={this.props.image} /> 
-                    <Card.Body>
-                    <Card.Title className="title">{this.props.title}</Card.Title>
-                    <Card.Text className="desc">
-                        {this.props.description}
-                    </Card.Text>
-                    </Card.Body>
-                    <Card.Footer>
-                    <small className="text-muted">Last updated 3 mins ago</small>
-                    </Card.Footer>
-                </Card>
-            </Col> 
-        )
+        if (!this.state.hover) {
+            return (
+                <Col onMouseEnter={() => this.switchHover(true)}>
+                    <Card 
+                        className="card" 
+                        bg="dark"
+                    >
+                        <Card.Img className="card-img" src={this.props.image} /> 
+                        <Card.Body>
+                        <Card.Title className="title">{this.props.title}</Card.Title>
+                        <Card.Text className="desc">
+                            {this.props.description}
+                        </Card.Text>
+                        </Card.Body>
+                        <Card.Footer>
+                            <small className="text-muted">Last updated 3 mins ago</small>
+                        </Card.Footer>
+                    </Card>
+                </Col> 
+            );
+        } else {
+            return (
+                <Col onMouseLeave={() => this.switchHover(false)}>
+                    <Card 
+                        className="hovercard" 
+                        bg="dark"
+                    >
+                        <div className="hovertitlecontainer">
+                            <Card.Title className="hovertitle">{this.props.title}</Card.Title>
+                        </div>
+                        <Button className="hoverbutton" variant="primary">Learn more</Button>
+                    </Card>
+                </Col>
+            ); 
+        }
     }
 }
 
