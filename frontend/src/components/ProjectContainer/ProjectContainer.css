@@ -11,3 +11,35 @@
     color: white;
     font-family: "Lato";
 }
+
+.buttongroup {
+    display: block;
+    margin: auto 0;
+    font-family: "Lato";
+}
+
+.buttongroupdiv {
+    text-align: center;
+}
+
+.button {
+    font-weight: bold;
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: #1a1a1d;
+    border-color: #30B2FF;
+}
+
+.button:hover {
+    background-color: #1a1a1d;
+}
+
+.active {
+    background-color: #30B2FF !important;
+    border-color: #30B2FF !important;
+}
+
+.active:focus {
+    outline: none !important;
+    box-shadow: none !important;
+}

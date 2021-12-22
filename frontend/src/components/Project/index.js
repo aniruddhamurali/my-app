@@ -47,7 +47,7 @@ class Project extends Component {
                             <div className="hovertitlecontainer">
                                 <Card.Title className="hovertitle">{this.props.title}</Card.Title>
                             </div>
-                            <Button className="hoverbutton" variant="primary">Learn more</Button>
+                            <Button class className="hoverbutton">Learn more</Button>
                         </Card>
                     </Collapse>
                 </Col>

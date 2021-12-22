@@ -46,4 +46,12 @@
     margin-top: 5vw;
     margin-left: auto;
     margin-right: auto;
+    border-color: #30B2FF;
+    background-color: #1a1a1d;
+}
+
+.hoverbutton:hover {
+    background-color: #30B2FF;
+    border-color: #30B2FF;
+    transition: 0.5s;
 }
