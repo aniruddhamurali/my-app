@@ -15,6 +15,7 @@ import 'bootstrap/dist/css/bootstrap.css';
 import styled from "styled-components";
 
 import Home from './components/Home';
+import Footer from './components/Footer';
 
 const Styles = styled.div`
   .navbar-brand,
@@ -58,6 +59,8 @@ function App() {
         <Routes>
           <Route path="/" element={<Home/>} />
         </Routes>
+
+        <Footer></Footer>
       </div>
     </Router>
   );
