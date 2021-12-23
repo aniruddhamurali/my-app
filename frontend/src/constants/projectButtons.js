@@ -10,6 +10,10 @@ const projectButtons = [
     {
         id: "machine-learning",
         text: "MACHINE LEARNING"
+    },
+    {
+        id: "front-end",
+        text: "FRONT-END"
     }
 ];
 

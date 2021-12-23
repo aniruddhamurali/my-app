@@ -10,13 +10,11 @@ class Project extends Component {
 		super(props);
 		this.state = {
             hover: false,
-            cardHeight: null
         };
 	}
 
     switchHover = (bool) => {
         this.setState({hover: bool});
-        this.setState({cardHeight: $('.card').height()})
     }
 
     render() {
