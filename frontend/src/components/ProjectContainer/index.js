@@ -21,6 +21,13 @@ class ProjectContainer extends Component {
             $('#' + projectButtons[i]["id"]).removeClass('active');
         }
         $('#' + id).addClass('active');
+        $(".cardgroup").addClass('animate');
+        $( ".cardgroup" ).on( "animationend", this.animationEndCallback);
+    }
+
+    animationEndCallback = (e) => {
+        $( ".cardgroup" ).off( "animationend", this.animationEndCallback);
+        $(".cardgroup").removeClass('animate');
     }
 
     getProjects = () => {
