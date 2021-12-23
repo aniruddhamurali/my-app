@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import {Card, Col, Button, Collapse} from 'react-bootstrap';
+import $ from 'jquery';
+
 import './Project.css';
 
 
@@ -7,12 +9,14 @@ class Project extends Component {
     constructor(props){
 		super(props);
 		this.state = {
-            hover: false
+            hover: false,
+            cardHeight: null
         };
 	}
 
     switchHover = (bool) => {
         this.setState({hover: bool});
+        this.setState({cardHeight: $('.card').height()})
     }
 
     render() {
@@ -20,7 +24,7 @@ class Project extends Component {
             return (
                 <Col onMouseEnter={() => this.switchHover(true)}>
                     <Card 
-                        className="card" 
+                        className="card h-100" 
                         bg="dark"
                     >
                         <Card.Img className="card-img" src={this.props.image} /> 
@@ -38,10 +42,10 @@ class Project extends Component {
             );
         } else {
             return (
-                <Col onMouseLeave={() => this.switchHover(false)}>
+                <Col onMouseLeave={() => this.switchHover(false)} style={{height: this.state.cardHeight}}>
                     <Collapse in={true} dimension="width">
                         <Card 
-                            className="hovercard" 
+                            className="hovercard h-100" 
                             bg="dark"
                         >
                             <div className="hovertitlecontainer">

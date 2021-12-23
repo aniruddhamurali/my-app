@@ -15,14 +15,15 @@
 
 .card {
     margin-bottom: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .hovercard {
     opacity: 0;
     margin-bottom: 10px;
-    height: 23vw;
     -webkit-transition: opacity 0.5s;
     transition: opacity 0.5s;
+    box-shadow: 0 4px 8px 4px rgba(48, 178, 255, 0.2), 0 -4px 8px 4px rgba(48, 178, 255, 0.19);
 }
 
 .hovercard:hover {
@@ -43,7 +44,7 @@
 
 .hoverbutton {
     width: 50%;
-    margin-top: 5vw;
+    margin-top: 10vw;
     margin-left: auto;
     margin-right: auto;
     border-color: #30B2FF;
