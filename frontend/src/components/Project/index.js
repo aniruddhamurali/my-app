@@ -43,7 +43,9 @@ class Project extends Component {
                     </Card>
                     <ProjectModal 
                         show={this.state.showModal} 
-                        toggleModal={this.toggleModal}>
+                        toggleModal={this.toggleModal}
+                        carousel={this.props.carousel}
+                    >
                     </ProjectModal> 
                 </Col>
             );
@@ -63,7 +65,9 @@ class Project extends Component {
                     </Collapse>
                     <ProjectModal
                         show={this.state.showModal} 
-                        toggleModal={this.toggleModal}>
+                        toggleModal={this.toggleModal}
+                        carousel={this.props.carousel}
+                    >
                     </ProjectModal> 
                 </Col>
             ); 

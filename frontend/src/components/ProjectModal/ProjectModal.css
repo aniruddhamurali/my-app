@@ -1,0 +1,15 @@
+.modal-50w {
+    width: 50%;
+    max-width: none !important;
+}
+
+.carousel {
+    height: 400px;
+    background-color: white;
+}
+    
+.carousel-inner, .item, img {
+    height: 400px;
+    object-fit: cover;
+    background-color: white;
+}
