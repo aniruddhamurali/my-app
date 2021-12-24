@@ -3,18 +3,23 @@ import {Card, Col, Button, Collapse} from 'react-bootstrap';
 import $ from 'jquery';
 
 import './Project.css';
-
+import ProjectModal from '../ProjectModal';
 
 class Project extends Component {
     constructor(props){
 		super(props);
 		this.state = {
             hover: false,
+            showModal: false
         };
 	}
 
     switchHover = (bool) => {
         this.setState({hover: bool});
+    }
+
+    toggleModal = () => {
+        this.setState({showModal: !this.state.showModal})
     }
 
     render() {
@@ -36,7 +41,11 @@ class Project extends Component {
                             <small className="text-muted">Last updated 3 mins ago</small>
                         </Card.Footer>
                     </Card>
-                </Col> 
+                    <ProjectModal 
+                        show={this.state.showModal} 
+                        toggleModal={this.toggleModal}>
+                    </ProjectModal> 
+                </Col>
             );
         } else {
             return (
@@ -49,12 +58,17 @@ class Project extends Component {
                             <div className="hovertitlecontainer">
                                 <Card.Title className="hovertitle">{this.props.title}</Card.Title>
                             </div>
-                            <Button class className="hoverbutton">Learn more</Button>
+                            <Button onClick={() => this.toggleModal()} className="hoverbutton">Learn more</Button>
                         </Card>
                     </Collapse>
+                    <ProjectModal
+                        show={this.state.showModal} 
+                        toggleModal={this.toggleModal}>
+                    </ProjectModal> 
                 </Col>
             ); 
         }
+
     }
 }
 
