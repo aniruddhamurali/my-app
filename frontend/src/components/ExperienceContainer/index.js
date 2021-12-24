@@ -16,7 +16,7 @@ class IntroContainer extends Component {
             <Container className="experiences" fluid>
                 <br></br>
                 <br></br>
-                <h1 className="header"><strong>———— Experience ————</strong></h1>
+                <h1 className="header"><strong>EXPERIENCE</strong></h1>
                 <br></br>
                 <br></br>
                 {experiences.map((item, index) => (

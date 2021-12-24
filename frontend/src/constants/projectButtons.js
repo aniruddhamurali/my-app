@@ -1,9 +1,5 @@
 const projectButtons = [
     {
-        id: "all",
-        text: "ALL"
-    },
-    {
         id: "full-stack",
         text: "FULL-STACK"
     },

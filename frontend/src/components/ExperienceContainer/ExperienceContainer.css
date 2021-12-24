@@ -6,4 +6,7 @@
     text-align: center;
     color: white;
     font-family: "Lato";
+    border-bottom: 2px solid white;
+    width: max-content;
+    margin: 0 auto;
 }

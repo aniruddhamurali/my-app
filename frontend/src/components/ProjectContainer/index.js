@@ -20,13 +20,16 @@ class ProjectContainer extends Component {
         for (let i = 0; i < projectButtons.length; i++) {
             $('#' + projectButtons[i]["id"]).removeClass('active');
         }
+
+        $('#all').removeClass('active');
         $('#' + id).addClass('active');
+
         $(".cardgroup").addClass('animate');
-        $( ".cardgroup" ).on( "animationend", this.animationEndCallback);
+        $(".cardgroup").on("animationend", this.animationEndCallback);
     }
 
     animationEndCallback = (e) => {
-        $( ".cardgroup" ).off( "animationend", this.animationEndCallback);
+        $(".cardgroup").off("animationend", this.animationEndCallback);
         $(".cardgroup").removeClass('animate');
     }
 
@@ -53,10 +56,18 @@ class ProjectContainer extends Component {
             <div className="projectcontainer">
                 <br></br>
                 <br></br>
-                <h1 className="header"><strong>———— Projects ————</strong></h1>
+                <h1 className="header"><strong>PROJECTS</strong></h1>
+                <br></br>
                 <br></br>
                 <div className="buttongroupdiv">
                 <ButtonGroup className="mb-2 buttongroup">
+                        <Button 
+                            id="all"
+                            onClick={(e) => this.onSelect("all", e)} 
+                            className="button active"
+                        >
+                            ALL
+                        </Button>
                     {projectButtons.map((item, index) => (
                         <Button 
                             id={item["id"]} 
