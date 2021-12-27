@@ -45,6 +45,8 @@ class Project extends Component {
                         show={this.state.showModal} 
                         toggleModal={this.toggleModal}
                         carousel={this.props.carousel}
+                        title={this.props.title}
+                        description={this.props.description}
                     >
                     </ProjectModal> 
                 </Col>
@@ -67,6 +69,8 @@ class Project extends Component {
                         show={this.state.showModal} 
                         toggleModal={this.toggleModal}
                         carousel={this.props.carousel}
+                        title={this.props.title}
+                        description={this.props.description}
                     >
                     </ProjectModal> 
                 </Col>
