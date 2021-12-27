@@ -13,7 +13,9 @@ class Home extends Component {
 		this.state = {};
         this.myRef = React.createRef()
 	}
-    
+
+
+    /*
     Sketch = (p) => {
         var snowflakes = [];
 
@@ -88,6 +90,182 @@ class Home extends Component {
         p.windowResized = () => {
             p.resizeCanvas(window.innerWidth, window.innerHeight);
         }
+    }*/
+
+    Sketch = (p) => {
+        var network;
+
+        p.setup = () => { 
+            //p.createCanvas(640, 360);
+            p.createCanvas(window.innerWidth, window.innerHeight);
+            network = new Network(p.width/2, p.height/2);
+            
+            var a = new Neuron(-275, 45);
+            var b = new Neuron(-275, -45);
+            
+            var c = new Neuron(-75, 135);
+            var d = new Neuron(-75, 45);
+            var e = new Neuron(-75, -45);
+            var f = new Neuron(-75, -135);
+            
+            var g = new Neuron(100, 0);
+            var h = new Neuron(275, 0);
+            
+            network.connect(a, c, p.random(1));
+            network.connect(a, d, p.random(1));
+            network.connect(a, e, p.random(1));
+            network.connect(a, f, p.random(1));
+            
+            network.connect(b, c, p.random(1));
+            network.connect(b, d, p.random(1));
+            network.connect(b, e, p.random(1));
+            network.connect(b, f, p.random(1));
+            
+            network.connect(c, g, p.random(1));
+            network.connect(d, g, p.random(1));
+            network.connect(e, g, p.random(1));
+            network.connect(f, g, p.random(1));
+            
+            network.connect(g, h, p.random(1));
+            
+            network.addNeuron(a);
+            network.addNeuron(b);
+            network.addNeuron(c);
+            network.addNeuron(d);
+            network.addNeuron(e);
+            network.addNeuron(f);
+            network.addNeuron(g);
+            network.addNeuron(h);
+        } 
+
+        p.draw = () => { 
+            p.background(0);
+            network.update();
+            network.display();
+            
+            if (p.frameCount % 30 === 0) {
+                network.feedforward(p.random(1), p.random(1));
+            }
+        }
+
+        function Connection(from, to,w) {
+            this.a = from;
+            this.b = to;
+            this.weight = w;
+            this.sending = false;
+            this.sender = null;
+            this.output = 0;
+            
+            
+            this.feedforward = function(val) {
+                this.output = val*this.weight;
+                this.sender = this.a.position.copy();
+                this.sending = true;
+            }
+            
+            this.update = function() {
+                if (this.sending) {
+                    this.sender.x = p.lerp(this.sender.x, this.b.position.x, 0.1);
+                    this.sender.y = p.lerp(this.sender.y, this.b.position.y, 0.1);
+                    var d = p5.Vector.dist(this.sender, this.b.position);
+                    if (d < 1) {
+                    this.b.feedforward(this.output);
+                    this.sending = false;
+                    }
+                }
+            }
+            
+            this.display = function() {
+                p.stroke(48, 178, 255);
+                p.strokeWeight(this.weight * 6);
+                p.line(this.a.position.x, this.a.position.y, this.b.position.x, this.b.position.y);
+                
+                if (this.sending) {
+                    p.fill(48, 178, 255);
+                    p.strokeWeight(1);
+                    p.ellipse(this.sender.x, this.sender.y, 16, 16);
+                }
+            }
+        }
+          
+        function Network(x, y) {
+            this.neurons = [];
+            this.connections = [];
+            this.position = p.createVector(x, y);
+            
+            this.addNeuron = function(n) {
+                this.neurons.push(n);
+            }
+            
+            this.connect = function(a, b, weight) {
+                var c = new Connection(a, b, weight);
+                a.addConnection(c);
+                this.connections.push(c);
+            }
+            
+            this.feedforward = function() {
+                for (var i = 0; i < arguments.length; i++) {
+                    var n = this.neurons[i];
+                    n.feedforward(arguments[i]);
+                }
+            }
+            
+            this.update = function() {
+                for (var i = 0; i < this.connections.length; i++) {
+                    this.connections[i].update();
+                }
+            }
+            
+            this.display = function() {
+                p.push();
+                p.translate(this.position.x, this.position.y);
+                for (var i = 0; i < this.neurons.length; i++) {
+                    this.neurons[i].display();
+                }
+              
+                for (var j = 0; j < this.connections.length; j++) {
+                    this.connections[j].display();
+                }
+                p.pop();
+            }
+          }
+          
+        function Neuron(x, y) {
+            this.position = p.createVector(x, y);
+            this.connections = [];
+            this.sum = 0;
+            this.r = 32;
+            
+            this.addConnection = function(c) {
+                this.connections.push(c);
+            }
+            
+            this.feedforward = function(input) {
+                this.sum += input;
+                if (this.sum > 1) {
+                    this.fire();
+                    this.sum = 0;
+                }
+            }
+            
+            this.fire = function() {
+                this.r = 64;
+                
+                for (var i = 0; i < this.connections.length; i++) {
+                    this.connections[i].feedforward(this.sum);
+                }
+            }
+            
+            this.display = function() {
+                p.stroke(0);
+                p.strokeWeight(1);
+                var b = p.map(this.sum, 0, 1, 255, 0);
+                p.fill(b);
+                p.ellipse(this.position.x, this.position.y, this.r, this.r);
+                
+                this.r = p.lerp(this.r, 32, 0.1);
+            }
+          }
     }
     
     componentDidMount() {
