@@ -1,15 +1,28 @@
 .container {
     color: white;
+}
+
+.vertical-timeline {
+    width: 80%;
+}
+
+.vertical-timeline-element {
+    background-color: transparent;
+}
+
+.vertical-timeline-element-date {
+    color: #888;
+}
+
+.experienceRow {
+    color: black;
     font-family: "Lato";
 }
 
-.imageCol {
-    text-align: right;
-}
 
 .image {
-    border-radius: 5%;
-    width: 200px;
+    border-radius: 10%;
+    width: 100%;
 }
 
 .vertical-timeline-element-icon {
@@ -17,8 +30,16 @@
 }
 
 .company {
-    color: #30B2FF;
+    font-family: 'Poppins';
+    margin-bottom: 0;
 }
+
+.role {
+    margin-bottom: 1px;
+}
+
+
+
 
 hr {
     width: 50%;

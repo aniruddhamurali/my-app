@@ -18,6 +18,15 @@
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
+.card:hover {
+    transition: box-shadow 0.5s;
+    cursor: pointer;
+    box-shadow: 0 4px 20px 4px rgba(48, 178, 255, 0.4), 0 -4px 20px 4px rgba(48, 178, 255, 0.39);
+}
+
+
+
+
 .hovercard {
     opacity: 0;
     margin-bottom: 10px;

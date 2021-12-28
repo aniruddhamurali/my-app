@@ -44,17 +44,23 @@ class Experience extends Component {
         return (
             <VerticalTimelineElement
                 className="vertical-timeline-element"
-                contentStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
-                contentArrowStyle={{ borderRight: '7px solid  rgb(33, 150, 243)' }}
+                contentStyle={{backgroundColor: "rgb(248, 240, 227)"}}
+                contentArrowStyle={{ borderRight: '7px solid rgb(248, 240, 227)' }}
                 date={this.props.timeframe}
                 iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff', textAlign: 'center' }}
                 icon={<FontAwesomeIcon size="lg" icon={faBriefcase}></FontAwesomeIcon>}
             >
-                <h3 className="vertical-timeline-element-title">{this.props.name}</h3>
-                <h4 className="vertical-timeline-element-subtitle">{this.props.role}</h4>
-                <p>
-                {this.props.description}
-                </p>
+                <Row className="experienceRow">
+                    <Col xs={12} md={4} className="imageCol">
+                        <img className="image" src={this.props.image} alt=""/>
+                    </Col>
+                    <Col xs={12} md={7}>
+                        <h3 className="company"><strong>{this.props.name}</strong></h3>
+                        <h5 className="role">{this.props.role}</h5>
+                        <h6>{this.props.location}</h6>
+                        <br></br>
+                    </Col>
+                </Row>
 
             </VerticalTimelineElement>
         )

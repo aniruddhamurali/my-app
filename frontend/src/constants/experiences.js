@@ -1,7 +1,7 @@
 const experiences = [
     {
-        "name": "Georgia Institute of Technology",
-        "role": "Research Assistant, Dr. Diyi Yang",
+        "name": "Georgia Tech",
+        "role": "Research Assistant",
         "location": "Atlanta, GA",
         "timeframe": "Feb 2021 - Present",
         "image": "images/Georgia-Tech.jpg",
@@ -13,7 +13,7 @@ const experiences = [
     },
     {
         "name": "Capital One",
-        "role": "Software Engineering Intern",
+        "role": "Software Engineer Intern",
         "location": "McLean, VA",
         "timeframe": "Jun - Aug 2021",
         "image": "images/Capital-One.jpg",
@@ -24,8 +24,8 @@ const experiences = [
         ]
     },
     {
-        "name": "Georgia Institute of Technology",
-        "role": "Research Assistant, Dr. Jacob Abernethy",
+        "name": "Georgia Tech",
+        "role": "Research Assistant",
         "location": "Atlanta, GA",
         "timeframe": "Jun 2020 - Apr 2021",
         "image": "images/Georgia-Tech.jpg",
