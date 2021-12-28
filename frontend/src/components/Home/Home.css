@@ -1,1 +1,12 @@
-
+#canvastext {
+    font-size: 48px;
+    text-align: center;
+    margin: 0 auto;
+    padding-left: 20%;
+    padding-right: 20%;
+    color: white;
+    background-color: black;
+    padding-top: 50px;
+    font-weight: bold;
+    font-family: 'Poppins-Black';
+}

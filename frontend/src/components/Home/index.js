@@ -94,11 +94,27 @@ class Home extends Component {
 
     Sketch = (p) => {
         var network;
+        var div;
 
         p.setup = () => { 
             var w = window.innerWidth;
             var h = window.innerHeight;
             p.createCanvas(window.innerWidth, window.innerHeight);
+
+            /*
+            div = p.createDiv("CREATING CREATIVE, INNOVATIVE TECHNOLOGIES");
+            div.id('canvastext');
+            //div.style('font-size', '48px');
+            //div.attribute('align', 'center');
+            //div.style('margin', '0 auto');
+            //p.rectMode(p.CENTER, p.CENTER);
+            //div.position(p.width/2, p.height/2 - 300);
+            div.style('left', '25%');
+            div.style('top', '15%');
+            div.style('position', 'absolute');
+            */
+
+
             network = new Network(w/2, h/2 + 50);
 
             var x1 = -w/8*2;
@@ -106,11 +122,11 @@ class Home extends Component {
             var x3 = 0;
             var x4 = w/8;
             var x5 = w/8*2;
-            var y1 = -225;
-            var y2 = -135;
-            var y3 = -45;
-            var y4 = 45;
-            var y5 = 135;
+            var y1 = -400;
+            var y2 = y1 + 100;
+            var y3 = y2 + 100;
+            var y4 = y3 + 100;
+            var y5 = y4 + 100;
             
             var a = new Neuron(x1, y4);
             var b = new Neuron(x1, y3);
@@ -213,11 +229,18 @@ class Home extends Component {
             var x3 = 0;
             var x4 = w/8;
             var x5 = w/8*2;
+            /*
             var y1 = -225;
             var y2 = -135;
             var y3 = -45;
             var y4 = 45;
             var y5 = 135;
+            */
+            var y1 = -400;
+            var y2 = y1 + 100;
+            var y3 = y2 + 100;
+            var y4 = y3 + 100;
+            var y5 = y4 + 100;
 
             network = new Network(w/2, h/2 + 50);
             
@@ -315,6 +338,7 @@ class Home extends Component {
 
         p.draw = () => { 
             p.background(0);
+            //div.position(p.width/2, p.height/2 - 300);
             network.update();
             network.display();
             
@@ -456,6 +480,9 @@ class Home extends Component {
     render() {
         return (
             <div>
+                <div id="canvastext">
+                    CREATING CREATIVE, IMPACTFUL TECHNOLOGIES
+                </div>
                 <div className="animation" ref={this.myRef}></div>
                 <IntroContainer></IntroContainer>
                 <ExperienceContainer></ExperienceContainer>
