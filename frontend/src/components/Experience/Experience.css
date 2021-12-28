@@ -12,6 +12,10 @@
     width: 200px;
 }
 
+.vertical-timeline-element-icon {
+    padding-left: 2px;
+}
+
 .company {
     color: #30B2FF;
 }

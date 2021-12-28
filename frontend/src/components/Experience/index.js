@@ -1,6 +1,11 @@
 import React, { Component } from 'react';
 import {Container, Row, Col} from 'react-bootstrap';
 import './Experience.css';
+import {faBriefcase} from '@fortawesome/free-solid-svg-icons';
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+
+import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timeline-component';
+import 'react-vertical-timeline-component/style.min.css';
 
 
 class Experience extends Component {
@@ -10,6 +15,7 @@ class Experience extends Component {
 	}
 
     render() {
+        /*
         return (
             <Container className="container" fluid>
                 <Row>
@@ -33,7 +39,26 @@ class Experience extends Component {
                 <br></br>
                 <br></br>
             </Container>    
+        )*/
+
+        return (
+            <VerticalTimelineElement
+                className="vertical-timeline-element"
+                contentStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
+                contentArrowStyle={{ borderRight: '7px solid  rgb(33, 150, 243)' }}
+                date={this.props.timeframe}
+                iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff', textAlign: 'center' }}
+                icon={<FontAwesomeIcon size="lg" icon={faBriefcase}></FontAwesomeIcon>}
+            >
+                <h3 className="vertical-timeline-element-title">{this.props.name}</h3>
+                <h4 className="vertical-timeline-element-subtitle">{this.props.role}</h4>
+                <p>
+                {this.props.description}
+                </p>
+
+            </VerticalTimelineElement>
         )
+
     }
 }
 
