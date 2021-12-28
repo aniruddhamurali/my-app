@@ -96,37 +96,96 @@ class Home extends Component {
         var network;
 
         p.setup = () => { 
-            //p.createCanvas(640, 360);
+            var w = window.innerWidth;
+            var h = window.innerHeight;
             p.createCanvas(window.innerWidth, window.innerHeight);
-            network = new Network(p.width/2, p.height/2);
+            network = new Network(w/2, h/2 + 50);
+
+            var x1 = -w/8*2;
+            var x2 = -w/8;
+            var x3 = 0;
+            var x4 = w/8;
+            var x5 = w/8*2;
+            var y1 = -225;
+            var y2 = -135;
+            var y3 = -45;
+            var y4 = 45;
+            var y5 = 135;
             
-            var a = new Neuron(-275, 45);
-            var b = new Neuron(-275, -45);
+            var a = new Neuron(x1, y4);
+            var b = new Neuron(x1, y3);
+            var c = new Neuron(x1, y2)
             
-            var c = new Neuron(-75, 135);
-            var d = new Neuron(-75, 45);
-            var e = new Neuron(-75, -45);
-            var f = new Neuron(-75, -135);
+            var d = new Neuron(x2, y5);
+            var e = new Neuron(x2, y4);
+            var f = new Neuron(x2, y3);
+            var g = new Neuron(x2, y2);
+            var h = new Neuron(x2, y1);
+
+            var i = new Neuron(x3, y5);
+            var j = new Neuron(x3, y4);
+            var k = new Neuron(x3, y3);
+            var l = new Neuron(x3, y2);
+            var m = new Neuron(x3, y1);
             
-            var g = new Neuron(100, 0);
-            var h = new Neuron(275, 0);
+            var n = new Neuron(x4, y3);
+            var o = new Neuron(x5, y3);
             
-            network.connect(a, c, p.random(1));
             network.connect(a, d, p.random(1));
             network.connect(a, e, p.random(1));
             network.connect(a, f, p.random(1));
+            network.connect(a, g, p.random(1));
+            network.connect(a, h, p.random(1));
             
-            network.connect(b, c, p.random(1));
             network.connect(b, d, p.random(1));
             network.connect(b, e, p.random(1));
             network.connect(b, f, p.random(1));
-            
+            network.connect(b, g, p.random(1));
+            network.connect(b, h, p.random(1));
+
+            network.connect(c, d, p.random(1));
+            network.connect(c, e, p.random(1));
+            network.connect(c, f, p.random(1));
             network.connect(c, g, p.random(1));
-            network.connect(d, g, p.random(1));
-            network.connect(e, g, p.random(1));
-            network.connect(f, g, p.random(1));
+            network.connect(c, h, p.random(1));
             
-            network.connect(g, h, p.random(1));
+            network.connect(d, i, p.random(1));
+            network.connect(d, j, p.random(1));
+            network.connect(d, k, p.random(1));
+            network.connect(d, l, p.random(1));
+            network.connect(d, m, p.random(1));
+
+            network.connect(e, i, p.random(1));
+            network.connect(e, j, p.random(1));
+            network.connect(e, k, p.random(1));
+            network.connect(e, l, p.random(1));
+            network.connect(e, m, p.random(1));
+
+            network.connect(f, i, p.random(1));
+            network.connect(f, j, p.random(1));
+            network.connect(f, k, p.random(1));
+            network.connect(f, l, p.random(1));
+            network.connect(f, m, p.random(1));
+
+            network.connect(g, i, p.random(1));
+            network.connect(g, j, p.random(1));
+            network.connect(g, k, p.random(1));
+            network.connect(g, l, p.random(1));
+            network.connect(g, m, p.random(1));
+
+            network.connect(h, i, p.random(1));
+            network.connect(h, j, p.random(1));
+            network.connect(h, k, p.random(1));
+            network.connect(h, l, p.random(1));
+            network.connect(h, m, p.random(1));
+            
+            network.connect(i, n, p.random(1));
+            network.connect(j, n, p.random(1));
+            network.connect(k, n, p.random(1));
+            network.connect(l, n, p.random(1));
+            network.connect(m, n, p.random(1));
+
+            network.connect(n, o, p.random(1));
             
             network.addNeuron(a);
             network.addNeuron(b);
@@ -136,7 +195,123 @@ class Home extends Component {
             network.addNeuron(f);
             network.addNeuron(g);
             network.addNeuron(h);
-        } 
+            network.addNeuron(i);
+            network.addNeuron(j);
+            network.addNeuron(k);
+            network.addNeuron(l);
+            network.addNeuron(m);
+            network.addNeuron(n);
+            network.addNeuron(o);
+        }
+        
+        function recreateNetwork() {
+            var w = window.innerWidth;
+            var h = window.innerHeight;
+
+            var x1 = -w/8*2;
+            var x2 = -w/8;
+            var x3 = 0;
+            var x4 = w/8;
+            var x5 = w/8*2;
+            var y1 = -225;
+            var y2 = -135;
+            var y3 = -45;
+            var y4 = 45;
+            var y5 = 135;
+
+            network = new Network(w/2, h/2 + 50);
+            
+            var a = new Neuron(x1, y4);
+            var b = new Neuron(x1, y3);
+            var c = new Neuron(x1, y2)
+            
+            var d = new Neuron(x2, y5);
+            var e = new Neuron(x2, y4);
+            var f = new Neuron(x2, y3);
+            var g = new Neuron(x2, y2);
+            var h = new Neuron(x2, y1);
+
+            var i = new Neuron(x3, y5);
+            var j = new Neuron(x3, y4);
+            var k = new Neuron(x3, y3);
+            var l = new Neuron(x3, y2);
+            var m = new Neuron(x3, y1);
+            
+            var n = new Neuron(x4, y3);
+            var o = new Neuron(x5, y3);
+            
+            network.connect(a, d, p.random(1));
+            network.connect(a, e, p.random(1));
+            network.connect(a, f, p.random(1));
+            network.connect(a, g, p.random(1));
+            network.connect(a, h, p.random(1));
+            
+            network.connect(b, d, p.random(1));
+            network.connect(b, e, p.random(1));
+            network.connect(b, f, p.random(1));
+            network.connect(b, g, p.random(1));
+            network.connect(b, h, p.random(1));
+
+            network.connect(c, d, p.random(1));
+            network.connect(c, e, p.random(1));
+            network.connect(c, f, p.random(1));
+            network.connect(c, g, p.random(1));
+            network.connect(c, h, p.random(1));
+            
+            network.connect(d, i, p.random(1));
+            network.connect(d, j, p.random(1));
+            network.connect(d, k, p.random(1));
+            network.connect(d, l, p.random(1));
+            network.connect(d, m, p.random(1));
+
+            network.connect(e, i, p.random(1));
+            network.connect(e, j, p.random(1));
+            network.connect(e, k, p.random(1));
+            network.connect(e, l, p.random(1));
+            network.connect(e, m, p.random(1));
+
+            network.connect(f, i, p.random(1));
+            network.connect(f, j, p.random(1));
+            network.connect(f, k, p.random(1));
+            network.connect(f, l, p.random(1));
+            network.connect(f, m, p.random(1));
+
+            network.connect(g, i, p.random(1));
+            network.connect(g, j, p.random(1));
+            network.connect(g, k, p.random(1));
+            network.connect(g, l, p.random(1));
+            network.connect(g, m, p.random(1));
+
+            network.connect(h, i, p.random(1));
+            network.connect(h, j, p.random(1));
+            network.connect(h, k, p.random(1));
+            network.connect(h, l, p.random(1));
+            network.connect(h, m, p.random(1));
+            
+            network.connect(i, n, p.random(1));
+            network.connect(j, n, p.random(1));
+            network.connect(k, n, p.random(1));
+            network.connect(l, n, p.random(1));
+            network.connect(m, n, p.random(1));
+
+            network.connect(n, o, p.random(1));
+            
+            network.addNeuron(a);
+            network.addNeuron(b);
+            network.addNeuron(c);
+            network.addNeuron(d);
+            network.addNeuron(e);
+            network.addNeuron(f);
+            network.addNeuron(g);
+            network.addNeuron(h);
+            network.addNeuron(i);
+            network.addNeuron(j);
+            network.addNeuron(k);
+            network.addNeuron(l);
+            network.addNeuron(m);
+            network.addNeuron(n);
+            network.addNeuron(o);
+        }
 
         p.draw = () => { 
             p.background(0);
@@ -146,6 +321,11 @@ class Home extends Component {
             if (p.frameCount % 30 === 0) {
                 network.feedforward(p.random(1), p.random(1));
             }
+        }
+
+        p.windowResized = () => {
+            p.resizeCanvas(window.innerWidth, window.innerHeight);
+            recreateNetwork();
         }
 
         function Connection(from, to,w) {
@@ -177,7 +357,8 @@ class Home extends Component {
             
             this.display = function() {
                 p.stroke(48, 178, 255);
-                p.strokeWeight(this.weight * 6);
+                p.strokeWeight(this.weight * 2);
+                //p.drawingContext.globalCompositeOperation = 'destination-over';
                 p.line(this.a.position.x, this.a.position.y, this.b.position.x, this.b.position.y);
                 
                 if (this.sending) {
@@ -219,12 +400,11 @@ class Home extends Component {
             this.display = function() {
                 p.push();
                 p.translate(this.position.x, this.position.y);
-                for (var i = 0; i < this.neurons.length; i++) {
-                    this.neurons[i].display();
-                }
-              
                 for (var j = 0; j < this.connections.length; j++) {
                     this.connections[j].display();
+                }
+                for (var i = 0; i < this.neurons.length; i++) {
+                    this.neurons[i].display();
                 }
                 p.pop();
             }
@@ -257,13 +437,13 @@ class Home extends Component {
             }
             
             this.display = function() {
-                p.stroke(0);
-                p.strokeWeight(1);
+                //p.stroke(0);
+                p.strokeWeight(0);
                 var b = p.map(this.sum, 0, 1, 255, 0);
                 p.fill(b);
                 p.ellipse(this.position.x, this.position.y, this.r, this.r);
                 
-                this.r = p.lerp(this.r, 32, 0.1);
+                this.r = p.lerp(this.r, 32, 0.05);
             }
           }
     }
