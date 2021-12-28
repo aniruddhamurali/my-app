@@ -99,7 +99,7 @@ class Home extends Component {
         p.setup = () => { 
             var w = window.innerWidth;
             var h = window.innerHeight;
-            p.createCanvas(window.innerWidth, window.innerHeight);
+            p.createCanvas(window.innerWidth, window.innerHeight-300);
 
             /*
             div = p.createDiv("CREATING CREATIVE, INNOVATIVE TECHNOLOGIES");
@@ -348,7 +348,7 @@ class Home extends Component {
         }
 
         p.windowResized = () => {
-            p.resizeCanvas(window.innerWidth, window.innerHeight);
+            p.resizeCanvas(window.innerWidth, window.innerHeight-300);
             recreateNetwork();
         }
 

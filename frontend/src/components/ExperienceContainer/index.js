@@ -39,6 +39,7 @@ class IntroContainer extends Component {
             <Container className="experiences" fluid>
                 <br></br>
                 <br></br>
+                <br></br>
                 <h1 className="header"><strong>EXPERIENCE</strong></h1>
                 <br></br>
                 <br></br>
@@ -55,6 +56,8 @@ class IntroContainer extends Component {
                         />
                     ))}
                 </VerticalTimeline>
+                <br></br>
+                <br></br>
             </Container>
         )
     }

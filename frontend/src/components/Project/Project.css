@@ -7,10 +7,16 @@
 
 .title {
     color: #30B2FF;
+    font-family: 'Poppins-Bold';
 }
 
 .desc{
     color: white;
+    font-family: 'Lato';
+}
+
+.text-muted {
+    font-family: 'Lato';
 }
 
 .card {

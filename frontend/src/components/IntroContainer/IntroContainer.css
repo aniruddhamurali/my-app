@@ -1,10 +1,12 @@
 .animation {
-    background-color: rgb(50, 50, 200);
+    /*background-color: rgb(50, 50, 200);*/
+    background-color: black;
 }
 
 .intro {
     padding: 50px;
-    background-color: rgb(50, 50, 200);
+    /*background-color: rgb(50, 50, 200);*/
+    background-color: black;
 }
 
 .introImage {
@@ -23,4 +25,8 @@
     color: white;
     line-height: 50%;
     margin: auto;
+}
+
+.introWelcome {
+    font-family: "Poppins-Bold";
 }
