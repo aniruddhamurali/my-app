@@ -4,6 +4,7 @@ import $ from 'jquery';
 
 import './Project.css';
 import ProjectModal from '../ProjectModal';
+import Tag from '../Tag';
 
 class Project extends Component {
     constructor(props){
@@ -38,7 +39,9 @@ class Project extends Component {
                     </Card.Text>
                     </Card.Body>
                     <Card.Footer>
-                        <small className="text-muted">Last updated 3 mins ago</small>
+                        {this.props.tags.map((item, index) => (
+                            <Tag tag={item}></Tag>
+                        ))}
                     </Card.Footer>
                 </Card>
                 <ProjectModal 
