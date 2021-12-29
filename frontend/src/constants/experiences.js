@@ -24,6 +24,16 @@ const experiences = [
         ]
     },
     {
+        "name": "Bits of Good",
+        "role": "Web Developer",
+        "location": "Atlanta, GA",
+        "timeframe": "Aug 2020 - Dec 2020",
+        "image": "images/bits-of-good.jpg",
+        "tasks": [
+            "Developed home page of General Solution, a platform that connects volunteers and donors to nonprofits that work with Bits of Good, using Javascript, ReactJS, Material UI, and Github."
+        ]
+    },
+    {
         "name": "Georgia Tech",
         "role": "Research Assistant",
         "location": "Atlanta, GA",
