@@ -56,15 +56,31 @@ xdoor-icon {
 }
 
 a {
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 5px;
+    padding-right: 5px;
 }
 
-.col {
+.footerRow .col {
     margin-bottom: 40px;
+    min-width: max-content;
 }
 
 .footerRow {
-    width: 80%;
+    width: 90%;
     margin: 0 auto;
+}
+
+.left {
+    text-align: left;
+}
+
+.category {
+    font-family: 'Poppins-Bold';
+    margin-bottom: 10px;
+}
+
+.footer-link {
+    margin-bottom: 6px;
+    color: #888;
+    font-family: 'Lato';
 }

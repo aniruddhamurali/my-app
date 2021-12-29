@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {Container, Row, Col} from 'react-bootstrap';
+import {Container, Row, Col, Stack} from 'react-bootstrap';
 import "./Footer.css"
 
 class Footer extends Component {
@@ -12,33 +12,46 @@ class Footer extends Component {
         return (
             <footer>
                 <Container>
-                    <Row className="footerRow">
-                        <Col className="col">
-                            <h4>Location</h4>
-                            <small>Westport, CT</small>
+                    <Row  className="g-4 footerRow justify-content-md-center">
+                        <Col xs={12} sm={12} md={3} lg={3} className="col left">
+                            <Stack gap={1}>
+                                <div className="category">Aniruddha Murali</div>
+                            </Stack>
                         </Col>
-                        <Col className="col">
-                            <h4>Phone</h4>
-                            <small>203-451-8797</small>
+                        <Col xs={12} sm={12} md={2} lg={2} className="col left">
+                            <Stack gap={1}>
+                                <div className="category">ABOUT</div>
+                                <div className="footer-link">Experience</div>
+                                <div className="footer-link">Projects</div>
+                            </Stack>
                         </Col>
-                        <Col className="col">
-                            <h4>Web</h4>
-                            <small>aniruddhamurali.com</small>
+                        <Col xs={12} sm={12} md={2} lg={2} className="col left">
+                            <Stack gap={1}>
+                                <div className="category">PROJECTS</div>
+                                <div className="footer-link">CovidForecasts</div>
+                                <div className="footer-link">COVID-Tracker</div>
+                            </Stack>
                         </Col>
-                        <Col className="col">
-                            <h4>Email</h4>
-                            <small>aniruddha.murali@gmail.com</small>
+                        <Col xs={12} sm={12} md={2} lg={2} className="col left">
+                            <Stack gap={1}>
+                                <div className="category">OTHER</div>
+                                <div className="footer-link">Blog</div>
+                                <div className="footer-link">Resume</div>
+                            </Stack>
+                        </Col>
+                        <Col xs={12} sm={12} md={3} lg={3} className="col">
+                            <div className="category">CONTACT</div>
+                            <div className="d-flex flex-wrap justify-content-center icons">
+                                <a href="https://www.instagram.com/aniruddhamurali/" target="_blank"><i class="fab fa-instagram-square fa-2x"></i></a>
+                                <a href="https://twitter.com/AniruddhaMurali" target="_blank"><i class="fab fa-twitter-square fa-2x" ></i></a>
+                                <a href="https://www.linkedin.com/in/aniruddhamurali/" target="_blank"><i class="fab fa-linkedin fa-2x"></i></a>
+                                <a href="mailto:aniruddha.murali@gmail.com?"><i class="fas fa-envelope fa-2x"></i></a>
+                            </div>
                         </Col>
                     </Row>
                 </Container>
-                <div className="d-flex flex-wrap justify-content-center icons">
-                    <a href="https://www.instagram.com/aniruddhamurali/" target="_blank"><i class="fab fa-instagram-square fa-3x"></i></a>
-                    <a href="https://twitter.com/AniruddhaMurali" target="_blank"><i class="fab fa-twitter-square fa-3x" ></i></a>
-                    <a href="https://www.linkedin.com/in/aniruddhamurali/" target="_blank"><i class="fab fa-linkedin fa-3x"></i></a>
-                    <a href="mailto:aniruddha.murali@gmail.com?"><i class="fas fa-envelope fa-3x"></i></a>
-                </div>
             </footer>
-        )
+        );
     }
 }
 
