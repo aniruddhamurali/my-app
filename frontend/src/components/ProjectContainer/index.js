@@ -53,7 +53,7 @@ class ProjectContainer extends Component {
         var shownProjects = this.getProjects();
 
         return (
-            <div className="projectcontainer">
+            <div id="Projects" className="projectcontainer">
                 <br></br>
                 <br></br>
                 <h1 className="header"><strong>PROJECTS</strong></h1>

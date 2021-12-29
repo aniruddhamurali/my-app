@@ -25,6 +25,14 @@
     width: 100%;
 }
 
+@media (max-width: 768px) {
+    .image {
+        height: 100px;
+        width: auto;
+        margin-bottom: 10px;
+    }
+}
+
 .vertical-timeline-element-icon {
     padding-left: 2px;
 }

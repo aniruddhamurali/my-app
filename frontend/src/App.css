@@ -48,6 +48,12 @@
   font-family: 'Lato';
 }
 
+.navbar .active {
+  background-color: #212529 !important;
+  color: #30B2FF !important;
+  font-weight: bold;
+}
+
 
 
 /**** FONTS ****/
