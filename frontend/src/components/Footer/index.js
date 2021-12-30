@@ -21,8 +21,8 @@ class Footer extends Component {
                         <Col xs={12} sm={12} md={2} lg={2} className="col left">
                             <Stack gap={1}>
                                 <div className="category">ABOUT</div>
-                                <div className="footer-link">Experience</div>
-                                <div className="footer-link">Projects</div>
+                                <div className="footer-link"><a href="#Experience">Experience</a></div>
+                                <div className="footer-link"><a href="#Projects">Projects</a></div>
                             </Stack>
                         </Col>
                         <Col xs={12} sm={12} md={2} lg={2} className="col left">

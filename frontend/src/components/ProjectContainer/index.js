@@ -88,6 +88,7 @@ class ProjectContainer extends Component {
                             image={item["image"]}
                             carousel={item["carousel"]}
                             tags={item["tags"]}
+                            about={item["about"]}
                         />
                     ))}
                 </Row>

@@ -84,3 +84,8 @@ a {
     color: #888;
     font-family: 'Lato';
 }
+
+.footer-link a {
+    all: unset;  /* unset automatic styles from a */
+    cursor: pointer;
+}

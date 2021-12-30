@@ -50,6 +50,7 @@ class Project extends Component {
                     carousel={this.props.carousel}
                     title={this.props.title}
                     description={this.props.description}
+                    about={this.props.about}
                 >
                 </ProjectModal> 
             </Col>
