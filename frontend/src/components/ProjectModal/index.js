@@ -46,7 +46,6 @@ class ProjectModal extends Component {
                     <Button variant="secondary" onClick={this.handleClose}>
                         Close
                     </Button>
-                    <Button variant="primary">Understood</Button>
                 </Modal.Footer>
             </Modal>
         );

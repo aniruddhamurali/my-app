@@ -10,8 +10,20 @@
     
 .carousel-inner, .carousel .item, .carousel img {
     height: 400px;
-    object-fit: cover;
-    background-color: white;
+    object-fit: contain;
+    background-color: black;
+}
+
+.carousel .carousel-indicators button.active {
+    border-color:#30B2FF !important;
+    background-color: #30B2FF !important;
+    border-top-width: 5px;
+    border-bottom-width: 5px;
+    margin-top: 5px;
+}
+
+.carousel .carousel-indicators button {
+    background-color: #30B2FF !important;
 }
 
 .modal-section {
@@ -22,4 +34,25 @@
     color: black;
     width: 100%;
     opacity: 0.05;
+}
+
+.modal-title {
+    font-family: 'Lato-Black';
+}
+
+.modal-body h5 {
+    font-family: 'Lato-Bold';
+}
+
+.modal-body p, .modal-body li {
+    font-family: 'Lato';
+}
+
+.modal-footer {
+    justify-content: center;
+}
+
+.modal-footer button:hover {
+    background-color: #30B2FF;
+    border-color: #30B2FF;
 }

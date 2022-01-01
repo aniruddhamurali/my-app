@@ -124,11 +124,12 @@ const projectModalContents = {
                     if his tweets could be used for a trading strategy centered around Tesla 
                     stock. We built a machine learning model to predict whether you should 
                     buy, sell, or hold TSLA stock based on a given tweet.
-                    <br></br>
+                </p>
+                <p>
                     We could have just used the TSLA stock price to gauge when to buy/sell/hold. 
                     However, we figured it may be a good idea to buy TSLA when it is undervalued 
-                    compared to the rest of the market. The Nasdaq index comprises more than 2500 
-                    stocks, so we decided to normalize TSLA stock data with Nasdaq index data.
+                    compared to the rest of the market. The Nasdaq Composite index comprises more than  
+                    2500 stocks, so we decided to normalize TSLA stock data with Nasdaq index data.
                 </p>
                 <hr></hr>
             </div>
@@ -205,6 +206,11 @@ const projectModalContents = {
                         </tr>
                     </tbody>
                 </Table>
+                <p>
+                    Note: Upsampling was used only for the Naive Bayes and neural network models. 
+                    To account for unbalanced data, the random forest and gradient boosting ensemble 
+                    models used F1-score as the accuracy metric.
+                </p>
                 <hr></hr>
             </div>
             <div className="modal-section">
@@ -248,7 +254,7 @@ const projectModalContents = {
                 <p>
                     Languages: Python
                     <br></br>
-                    Frameworks/APIs: Scikit-learn, Pandas, NumPy, Matplotlib, Yahoo Finance API, data.world
+                    Frameworks/APIs: Scikit-learn, Pandas, NumPy, Matplotlib, Yahoo Finance API, Data.world
                 </p>
             </div>
         </div>
