@@ -2,6 +2,17 @@ import projectModalContents from "./projectModalContents";
 
 const projects = [
     {
+        "title": "Musks Musings",
+        "description": "Predicts what to do with TSLA stock given Elon Musk tweet",
+        "image": "/images/elonmusk-tsla.png",
+        "carousel": [
+            "/images/musk-musings-clustering.png",
+            "/images/musk-musings-neural-net-result.png"
+        ],
+        "tags": ["machine-learning"],
+        "about": projectModalContents["Musks Musings"]
+    },
+    {
         "title": "COVID-19 Tracker",
         "description": "Tracks relevant Covid-19 data",
         "image": "/images/covid19tracker.png",
@@ -14,17 +25,6 @@ const projects = [
         ],
         "tags": ["full-stack", "machine-learning", "front-end"],
         "about": projectModalContents["COVID-19 Tracker"]
-    },
-    {
-        "title": "Musks Musings",
-        "description": "Predicts what to do with TSLA stock given Elon Musk tweet",
-        "image": "/images/elonmusk-tsla.png",
-        "carousel": [
-            "/images/musk-musings-clustering.png",
-            "/images/musk-musings-neural-net-result.png"
-        ],
-        "tags": ["machine-learning"],
-        "about": projectModalContents["Musks Musings"]
     },
     {
         "title": "Breast Cancer Diagnosis (CNN)",

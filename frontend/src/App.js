@@ -16,6 +16,7 @@ import styled from "styled-components";
 
 import Home from './components/Home';
 import Footer from './components/Footer';
+import Chat from './components/Chat';
 
 const Styles = styled.div`
   .navbar-brand,
@@ -59,11 +60,14 @@ function App() {
           </Navbar>
         </Styles>
 
+        
         <Routes>
           <Route path="/" element={<Home/>} />
         </Routes>
+        
 
         <Footer></Footer>
+        <Chat></Chat>
       </div>
     </Router>
   );
