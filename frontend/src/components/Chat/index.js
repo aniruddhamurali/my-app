@@ -32,7 +32,7 @@ class Chat extends Component {
             return (
                 <div id="chatbot">
                     <Chatbot
-                        config={config}
+                        config={config(this.switchChat)}
                         messageParser={MessageParser}
                         actionProvider={ActionProvider}
                     />
