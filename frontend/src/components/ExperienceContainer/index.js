@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
-import {Container, Row, Col} from 'react-bootstrap';
+import {Container} from 'react-bootstrap';
 
 import Experience from '../Experience';
 import experiences from '../../constants/experiences';
 import "./ExperienceContainer.css";
 
-import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timeline-component';
+import { VerticalTimeline }  from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
 
 class IntroContainer extends Component {
@@ -15,26 +15,6 @@ class IntroContainer extends Component {
 	}
 
     render() {
-        /*
-        return (
-            <Container className="experiences" fluid>
-                <br></br>
-                <br></br>
-                <h1 className="header"><strong>EXPERIENCE</strong></h1>
-                <br></br>
-                <br></br>
-                {experiences.map((item, index) => (
-                    <Experience 
-                        name={item["name"]} 
-                        role={item["role"]} 
-                        location={item["location"]}
-                        timeframe={item["timeframe"]}
-                        image={item["image"]}
-                        tasks={item["tasks"]}
-                    />
-                ))}
-            </Container>
-        )*/
         return (
             <Container id="Experience" className="experiences" fluid>
                 <br></br>

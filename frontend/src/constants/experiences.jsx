@@ -3,7 +3,7 @@ import experienceModalContents from "./experienceModalContents";
 const experiences = [
     {
         "name": "Goldman Sachs",
-        "role": "Quant Strat Intern",
+        "role": "Quant Strategist Intern",
         "location": "Dallas, TX",
         "timeframe": "Jun 2022 - Aug 2022",
         "image": "images/Goldman-Sachs.png",
@@ -14,7 +14,7 @@ const experiences = [
     },
     {
         "name": "Georgia Tech",
-        "role": "Research Assistant",
+        "role": "Research Assistant, Dr. Diyi Yang",
         "location": "Atlanta, GA",
         "timeframe": "Feb 2021 - Present",
         "image": "images/Georgia-Tech.jpg",
@@ -25,7 +25,7 @@ const experiences = [
     },
     {
         "name": "Capital One",
-        "role": "Software Engineer Intern",
+        "role": "Software Engineering Intern",
         "location": "McLean, VA",
         "timeframe": "Jun 2021 - Aug 2021",
         "image": "images/Capital-One.jpg",
@@ -47,7 +47,7 @@ const experiences = [
     },
     {
         "name": "Georgia Tech",
-        "role": "Research Assistant",
+        "role": "Research Assistant, Dr. Jacob Abernethy",
         "location": "Atlanta, GA",
         "timeframe": "Jun 2020 - Apr 2021",
         "image": "images/Georgia-Tech.jpg",

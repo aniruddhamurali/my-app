@@ -1,7 +1,7 @@
 #chat {
     position: fixed;
-    bottom: 10%;
-    right: 5%;
+    bottom: 3%;
+    right: 2%;
     background-color: #30B2FF;
     padding: 20px;
     border-radius: 50%;
@@ -10,6 +10,8 @@
 
 #chat:hover {
     cursor: pointer;
+    color: white;
+    transition: color 0.5s;
 }
 
 

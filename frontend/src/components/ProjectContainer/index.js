@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {CardGroup, Row, Col, ButtonGroup, Button} from 'react-bootstrap';
+import {Row, ButtonGroup, Button} from 'react-bootstrap';
 import $ from 'jquery';
 
 import Project from '../Project';

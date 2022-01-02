@@ -20,7 +20,6 @@ class ActionProvider {
           message: userMessage
       };
       fetch('http://localhost:5005/webhooks/rest/webhook', {
-          //mode: 'no-cors',
           method: 'post',
           headers: {
             'Content-Type': 'application/json',
@@ -28,7 +27,6 @@ class ActionProvider {
           },
           body: JSON.stringify(response)
       }).then(res => res.json())
-        //.then(res => console.log(res))
         .then(res => {
             for (let i = 0; i < res.length; i++) {
                 if (res[i].text) {

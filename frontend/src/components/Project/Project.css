@@ -12,7 +12,7 @@
     font-family: 'Poppins-Bold';
 }
 
-.desc{
+.desc {
     color: white;
     font-family: 'Lato';
 }
@@ -35,46 +35,4 @@
     transition: box-shadow 0.5s;
     cursor: pointer;
     box-shadow: 0 4px 20px 4px rgba(48, 178, 255, 0.4), 0 -4px 20px 4px rgba(48, 178, 255, 0.39);
-}
-
-
-
-
-.hovercard {
-    opacity: 0;
-    margin-bottom: 10px;
-    -webkit-transition: opacity 0.5s;
-    transition: opacity 0.5s;
-    box-shadow: 0 4px 8px 4px rgba(48, 178, 255, 0.2), 0 -4px 8px 4px rgba(48, 178, 255, 0.19);
-}
-
-.hovercard:hover {
-    opacity: 1;
-}
-
-.hovertitle {
-    display: table-cell;
-    text-align: center;
-    vertical-align: middle;
-    color: #30B2FF;
-    padding-top: 5vw;
-}
-
-.hovertitlecontainer {
-    display: table;
-}
-
-.hoverbutton {
-    width: 50%;
-    margin-top: 10vw;
-    margin-left: auto;
-    margin-right: auto;
-    border-color: #30B2FF;
-    background-color: #1a1a1d;
-}
-
-.hoverbutton:hover {
-    background-color: #30B2FF;
-    border-color: #30B2FF;
-    transition: 0.5s;
 }

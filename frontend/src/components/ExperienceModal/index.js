@@ -11,7 +11,6 @@ class ExperienceModal extends Component {
 
     handleClose = () => {
         this.props.toggleModal();
-        //$(".hovercard").addClass("card").removeClass("hovercard");
     }
 
     render() {
@@ -48,19 +47,6 @@ class ExperienceModal extends Component {
                 keyboard={true}
                 dialogClassName="modal-50w"
             >
-                {/*
-                <Carousel>
-                    {this.props.carousel.map((item, index) => (
-                        <Carousel.Item>
-                            <img
-                                className="d-block w-100"
-                                src={item}
-                                alt="First slide"
-                            />
-                      </Carousel.Item>
-                    ))}
-                </Carousel>
-                    */}
                 {slides}
 
                 <Modal.Header closeButton>

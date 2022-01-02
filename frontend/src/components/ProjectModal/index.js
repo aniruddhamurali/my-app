@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import {Modal, Button, Carousel} from 'react-bootstrap';
-import $ from 'jquery';
 
 import "./ProjectModal.css"
 
@@ -12,7 +11,6 @@ class ProjectModal extends Component {
 
     handleClose = () => {
         this.props.toggleModal();
-        //$(".hovercard").addClass("card").removeClass("hovercard");
     }
 
     render() {
@@ -40,7 +38,7 @@ class ProjectModal extends Component {
                 </Carousel>
             );
         }
-        
+
         return (
             <Modal
                 show={this.props.show}
@@ -49,19 +47,6 @@ class ProjectModal extends Component {
                 keyboard={true}
                 dialogClassName="modal-50w"
             >
-                {/*
-                <Carousel>
-                    {this.props.carousel.map((item, index) => (
-                        <Carousel.Item>
-                            <img
-                                className="d-block w-100"
-                                src={item}
-                                alt="First slide"
-                            />
-                      </Carousel.Item>
-                    ))}
-                </Carousel>
-                    */}
                 {slides}
 
                 <Modal.Header closeButton>
