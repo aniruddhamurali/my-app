@@ -2,6 +2,17 @@ import experienceModalContents from "./experienceModalContents";
 
 const experiences = [
     {
+        "name": "Goldman Sachs",
+        "role": "Quant Strat Intern",
+        "location": "Dallas, TX",
+        "timeframe": "Jun 2022 - Aug 2022",
+        "image": "images/Goldman-Sachs.png",
+        "carousel": [
+            "images/Goldman-Sachs.png"
+        ],
+        "about": experienceModalContents["Goldman Sachs Jun 2022 - Aug 2022"]
+    },
+    {
         "name": "Georgia Tech",
         "role": "Research Assistant",
         "location": "Atlanta, GA",
@@ -44,6 +55,17 @@ const experiences = [
             "images/Georgia-Tech.jpg"
         ],
         "about": experienceModalContents["Georgia Tech Jun 2020 - Apr 2021"]
+    },
+    {
+        "name": "Yale School of Medicine",
+        "role": "Research Intern",
+        "location": "New Haven, CT",
+        "timeframe": "May 2019 - Jun 2019",
+        "image": "images/Yale-School-of-Medicine.png",
+        "carousel": [
+            "images/Yale-School-of-Medicine.png"
+        ],
+        "about": experienceModalContents["Yale University School of Medicine May 2019 - Jun 2019"]
     },
     {
         "name": "Zenabi Data",

@@ -1,4 +1,17 @@
 const experienceModalContents = {
+    "Goldman Sachs Jun 2022 - Aug 2022": (
+        <div>
+            <div className="modal-section">
+                <h5>What I Did</h5>
+                <ul>
+                    <li>
+                        Risk Division
+                    </li>
+                </ul>
+                <hr></hr>
+            </div>
+        </div>
+    ),
     "Georgia Tech Feb 2021 - Present": (
         <div>
             <div className="modal-section">
@@ -144,6 +157,23 @@ const experienceModalContents = {
                     <br></br>
                     Frameworks: Scikit-learn, Pandas, jQuery
                 </p>
+            </div>
+        </div>
+    ),
+    "Yale University School of Medicine May 2019 - Jun 2019": (
+        <div>
+            <div className="modal-section">
+                <h5>What I Did</h5>
+                <ul>
+                    <li>
+                        Research group studied the role of mitochondria and energy efficiency in 
+                        neurodegenerative disease states, in learning, and in memory formation in healthy 
+                        brains. We also studied how inhibiting opening of the leak channel in the mitochondria
+                        may ameliorate stroke, neurodegenerative and developmental brain diseases. I analyzed
+                        images of activity between neurons to collect data for this research project.
+                    </li>
+                </ul>
+                <hr></hr>
             </div>
         </div>
     ),
