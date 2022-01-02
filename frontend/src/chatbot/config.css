@@ -1,0 +1,19 @@
+.chatbot-header {
+    padding: 12.5px;
+    border-radius: 3px;
+    color: #514F4F;
+    font-size: 13.6px;
+    font-family: Arial;
+    font-weight: bold;
+    background-color: #EFEFEF;
+}
+
+.chatbot-close {
+    float: right;
+    margin-top: 2px;
+}
+
+.chatbot-close:hover {
+    cursor: pointer;
+    color: black;
+}

@@ -1,31 +1,23 @@
 import { createChatBotMessage } from "react-chatbot-kit";
 import BotAvatar from "./BotAvatar";
+import "./config.css";
 
-const headerStyle = {
-  padding: "12.5px",
-  borderRadius: "3px",
-  color: "#514F4F",
-  fontSize: "13.6px",
-  fontFamily: "Arial",
-  fontWeight: "bold",
-  backgroundColor: "#EFEFEF"
-};
+import {faTimes} from '@fortawesome/free-solid-svg-icons';
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 
-const buttonStyle = {
-  float: "right",
-  marginTop: "-3px"
-};
 
 const config = (close) => {
   return ({
-    initialMessages: [createChatBotMessage(`Hello world`)],
+    initialMessages: [createChatBotMessage(`Hey there! I'm Ani, Aniruddha's chatbot. What would you like to know?`)],
     botName: 'Ani',
     customComponents: {
       botAvatar: (props) => <BotAvatar {...props} />,
       header: () => 
-        <div style={headerStyle}>
+        <div className="chatbot-header">
           Conversation with Ani 
-          <button style={buttonStyle} onClick={close}>Close</button>
+          <span onClick={close}>
+            <FontAwesomeIcon className="chatbot-close" icon={faTimes}></FontAwesomeIcon>
+          </span>
         </div>
     },
     customStyles: {
