@@ -1,18 +1,26 @@
 import React, { Component } from 'react';
 import {Container, Row, Col} from 'react-bootstrap';
-import './Experience.css';
 import {faBriefcase} from '@fortawesome/free-solid-svg-icons';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 
 import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
 
+import './Experience.css';
+import ExperienceModal from '../ExperienceModal';
+
 
 class Experience extends Component {
     constructor(props){
 		super(props);
-		this.state = {};
+		this.state = {
+            showModal: false
+        };
 	}
+
+    toggleModal = () => {
+        this.setState({showModal: !this.state.showModal})
+    }
 
     render() {
         /*
@@ -50,7 +58,7 @@ class Experience extends Component {
                 iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff', textAlign: 'center' }}
                 icon={<FontAwesomeIcon size="lg" icon={faBriefcase}></FontAwesomeIcon>}
             >
-                <Row className="experienceRow">
+                <Row className="experienceRow" onClick={() => this.toggleModal()}>
                     <Col xs={12} md={4} className="imageCol">
                         <img className="image" src={this.props.image} alt=""/>
                     </Col>
@@ -61,6 +69,15 @@ class Experience extends Component {
                         <br></br>
                     </Col>
                 </Row>
+                <ExperienceModal 
+                    show={this.state.showModal} 
+                    toggleModal={this.toggleModal}
+                    carousel={[]}
+                    title={this.props.name}
+                    description={this.props.description}
+                    about={this.props.about}
+                >
+                </ExperienceModal> 
 
             </VerticalTimelineElement>
         )
