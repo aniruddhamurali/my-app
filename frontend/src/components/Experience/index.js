@@ -66,13 +66,12 @@ class Experience extends Component {
                         <h3 className="company"><strong>{this.props.name}</strong></h3>
                         <h5 className="role">{this.props.role}</h5>
                         <h6>{this.props.location}</h6>
-                        <br></br>
                     </Col>
                 </Row>
                 <ExperienceModal 
                     show={this.state.showModal} 
                     toggleModal={this.toggleModal}
-                    carousel={[]}
+                    carousel={this.props.carousel}
                     title={this.props.name}
                     description={this.props.description}
                     about={this.props.about}

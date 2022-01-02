@@ -51,8 +51,8 @@ class IntroContainer extends Component {
                             location={item["location"]}
                             timeframe={item["timeframe"]}
                             image={item["image"]}
-                            icon={item["icon"]}
-                            tasks={item["tasks"]}
+                            about={item["about"]}
+                            carousel={item["carousel"]}
                         />
                     ))}
                 </VerticalTimeline>
