@@ -57,8 +57,9 @@ class Experience extends Component {
                 date={this.props.timeframe}
                 iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff', textAlign: 'center' }}
                 icon={<FontAwesomeIcon size="lg" icon={faBriefcase}></FontAwesomeIcon>}
+                onTimelineElementClick={() => {if (!this.state.showModal) this.toggleModal()}}
             >
-                <Row className="experienceRow" onClick={() => this.toggleModal()}>
+                <Row className="experienceRow">
                     <Col xs={12} md={4} className="imageCol">
                         <img className="image" src={this.props.image} alt=""/>
                     </Col>

@@ -16,14 +16,17 @@ class ProjectModal extends Component {
     }
 
     render() {
-        return (
-            <Modal
-                show={this.props.show}
-                onHide={this.handleClose}
-                backdrop="static"
-                keyboard={true}
-                dialogClassName="modal-50w"
-            >
+        var slides;
+        if (this.props.carousel.length === 1) {
+            slides = (
+                <img
+                    className="d-block w-100"
+                    src={this.props.carousel[0]}
+                    alt="First slide"
+                />
+            ); 
+        } else {
+            slides = (
                 <Carousel>
                     {this.props.carousel.map((item, index) => (
                         <Carousel.Item>
@@ -35,6 +38,31 @@ class ProjectModal extends Component {
                       </Carousel.Item>
                     ))}
                 </Carousel>
+            );
+        }
+        
+        return (
+            <Modal
+                show={this.props.show}
+                onHide={this.handleClose}
+                backdrop="static"
+                keyboard={true}
+                dialogClassName="modal-50w"
+            >
+                {/*
+                <Carousel>
+                    {this.props.carousel.map((item, index) => (
+                        <Carousel.Item>
+                            <img
+                                className="d-block w-100"
+                                src={item}
+                                alt="First slide"
+                            />
+                      </Carousel.Item>
+                    ))}
+                </Carousel>
+                    */}
+                {slides}
 
                 <Modal.Header closeButton>
                     <Modal.Title>{this.props.title}</Modal.Title>
