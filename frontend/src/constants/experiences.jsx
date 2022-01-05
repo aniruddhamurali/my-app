@@ -3,7 +3,7 @@ import experienceModalContents from "./experienceModalContents";
 const experiences = [
     {
         "name": "Goldman Sachs",
-        "role": "Quant Strategist Intern",
+        "role": "Incoming Quantitative Strategist Intern",
         "location": "Dallas, TX",
         "timeframe": "Jun 2022 - Aug 2022",
         "image": "images/Goldman-Sachs.png",
@@ -41,7 +41,8 @@ const experiences = [
         "timeframe": "Aug 2020 - Dec 2020",
         "image": "images/bits-of-good.jpg",
         "carousel": [
-            "images/bits-of-good.jpg"
+            "images/general-solution-1.png",
+            "images/general-solution-2.png",
         ],
         "about": experienceModalContents["Bits of Good Aug 2020 - Dec 2020"]
     },
@@ -52,13 +53,14 @@ const experiences = [
         "timeframe": "Jun 2020 - Apr 2021",
         "image": "images/Georgia-Tech.jpg",
         "carousel": [
-            "images/Georgia-Tech.jpg"
+            "images/covidforecasts-home.png",
+            "images/covidforecasts-topforecasts.png",
         ],
         "about": experienceModalContents["Georgia Tech Jun 2020 - Apr 2021"]
     },
     {
         "name": "Yale School of Medicine",
-        "role": "Research Intern",
+        "role": "Research Intern, Dr. Elizbaeth Jonas",
         "location": "New Haven, CT",
         "timeframe": "May 2019 - Jun 2019",
         "image": "images/Yale-School-of-Medicine.png",
@@ -74,7 +76,8 @@ const experiences = [
         "timeframe": "Aug 2018 - Aug 2019",
         "image": "images/Zenabi-Data.jpg",
         "carousel": [
-            "images/Zenabi-Data.jpg"
+            "images/zenabi-correlations.png",
+            "images/zenabi-analysis.png"
         ],
         "about": experienceModalContents["Zenabi Data Aug 2018 - Aug 2019"]
     }
