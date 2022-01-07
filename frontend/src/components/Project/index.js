@@ -27,10 +27,10 @@ class Project extends Component {
                 >
                     <Card.Img className="card-img" src={this.props.image} /> 
                     <Card.Body>
-                    <Card.Title className="title">{this.props.title}</Card.Title>
-                    <Card.Text className="desc">
-                        {this.props.description}
-                    </Card.Text>
+                        <Card.Title className="title">{this.props.title}</Card.Title>
+                        <Card.Text className="desc">
+                            {this.props.description}
+                        </Card.Text>
                     </Card.Body>
                     <Card.Footer>
                         {this.props.tags.map((item, index) => (

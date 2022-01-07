@@ -1,3 +1,7 @@
+import { Container, Col, Row } from "react-bootstrap";
+import {faLink, faFilePdf, faCode} from '@fortawesome/free-solid-svg-icons';
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+
 const experienceModalContents = {
     "Goldman Sachs Jun 2022 - Aug 2022": (
         <div>
@@ -160,6 +164,7 @@ const experienceModalContents = {
                         rule-based. ML will allow more engaging, dynamic conversations. 
                     </li>
                 </ul>
+                <hr></hr>
             </div>
             <div className="modal-section">
                 <h5>Technologies and Tools</h5>
@@ -286,6 +291,7 @@ const experienceModalContents = {
                     Once we get a score, we divide the score by a large constant 
                     to decrease the size of the number to make it easier to read on the frontend.
                 </p>
+                <hr></hr>
             </div>
             <div className="modal-section">
                 <h5>Technologies and Tools</h5>
@@ -296,6 +302,26 @@ const experienceModalContents = {
                     <br></br>
                     Other: MongoDB, Heroku
                 </p>
+                <hr></hr>
+            </div>
+            <div className="modal-section">
+                <h5>Links</h5>
+                <Container>
+                    <Row>
+                        <Col lg={2}>
+                            <a href="https://www.covidforecasts.com/#/" target="_blank" rel="noopener noreferrer">
+                                <FontAwesomeIcon icon={faLink}></FontAwesomeIcon>
+                                <small>Website</small>
+                            </a>
+                        </Col>
+                        <Col lg={2}>
+                            <a href="https://github.com/GTIdeas2020REU/covid19-forecasting-market" target="_blank" rel="noopener noreferrer">
+                                <FontAwesomeIcon icon={faCode}></FontAwesomeIcon>
+                                <small>Code</small>
+                            </a>
+                        </Col>
+                    </Row>
+                </Container>
             </div>
         </div>
     ),

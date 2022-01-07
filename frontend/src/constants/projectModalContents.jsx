@@ -1,4 +1,6 @@
-import { Table } from "react-bootstrap";
+import { Table, Container, Col, Row} from "react-bootstrap";
+import {faLink, faFilePdf, faCode} from '@fortawesome/free-solid-svg-icons';
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 
 const projectModalContents = {
     "COVID-19 Tracker" : (
@@ -112,6 +114,26 @@ const projectModalContents = {
                     <br></br>
                     Other: MongoDB, Heroku
                 </p>
+                <hr></hr>
+            </div>
+            <div className="modal-section">
+                <h5>Links</h5>
+                <Container>
+                    <Row>
+                        <Col lg={2}>
+                            <a href="covid19tracker.herokuapp.com" target="_blank" rel="noopener noreferrer">
+                                <FontAwesomeIcon icon={faLink}></FontAwesomeIcon>
+                                <small>Website</small>
+                            </a>
+                        </Col>
+                        <Col lg={2}>
+                            <a href="https://github.com/aniruddhamurali/COVID-19-Live" target="_blank" rel="noopener noreferrer">
+                                <FontAwesomeIcon icon={faCode}></FontAwesomeIcon>
+                                <small>Code</small>
+                            </a>
+                        </Col>
+                    </Row>
+                </Container>
             </div>
         </div>
     ),
@@ -256,6 +278,20 @@ const projectModalContents = {
                     <br></br>
                     Frameworks/APIs: Scikit-learn, Pandas, NumPy, Matplotlib, Yahoo Finance API, Data.world
                 </p>
+                <hr></hr>
+            </div>
+            <div className="modal-section">
+                <h5>Links</h5>
+                <Container>
+                    <Row>
+                        <Col>
+                            <a href="https://github.gatech.edu/pages/aghosh74/Musks-Musings/" target="_blank" rel="noopener noreferrer">
+                                <FontAwesomeIcon icon={faLink}></FontAwesomeIcon>
+                                <small>Project</small>
+                            </a>
+                        </Col>
+                    </Row>
+                </Container>
             </div>
         </div>
     ),
@@ -465,6 +501,7 @@ const projectModalContents = {
                     <li>Staples High School Sameer Mathur Research Award (excellence in research)</li>
                     <li>Paper published in International Journal of Scientific and Engineering Research (IJSER)</li>
                 </ul>
+                <hr></hr>
             </div>
             <div className="modal-section">
                 <h5>Technologies and Tools</h5>
@@ -473,6 +510,20 @@ const projectModalContents = {
                     <br></br>
                     Frameworks/APIs: Flask
                 </p>
+                <hr></hr>
+            </div>
+            <div className="modal-section">
+                <h5>Links</h5>
+                <Container>
+                    <Row>
+                        <Col>
+                            <a href="http://bit.ly/aniruddha-research-ijser" target="_blank" rel="noopener noreferrer">
+                                <FontAwesomeIcon icon={faFilePdf}></FontAwesomeIcon>
+                                <small>Paper</small>
+                            </a>
+                        </Col>
+                    </Row>
+                </Container>
             </div>
         </div>
     ),
@@ -599,6 +650,7 @@ const projectModalContents = {
                     <li>Chosen to present research at Staples High School Science Symposium</li>
                     <li>Paper published in International Journal of Scientific and Engineering Research (IJSER)</li>
                 </ul>
+                <hr></hr>
             </div>
             <div className="modal-section">
                 <h5>Technologies and Tools</h5>
@@ -607,9 +659,24 @@ const projectModalContents = {
                     <br></br>
                     Frameworks/APIs: Keras, OpenCV, Scikit-learn, Pandas, Matplotlib
                 </p>
+                <hr></hr>
+            </div>
+            <div className="modal-section">
+                <h5>Links</h5>
+                <Container>
+                    <Row>
+                        <Col>
+                            <a href="http://bit.ly/aniruddha-research-idc-cnn" target="_blank" rel="noopener noreferrer">
+                                <FontAwesomeIcon icon={faFilePdf}></FontAwesomeIcon>
+                                <small>Paper</small>
+                            </a>
+                        </Col>
+                    </Row>
+                </Container>
             </div>
         </div>
     ),
+
     "Automating Makerspace Sign-in": (
         <div>
             <div className="modal-section">
@@ -646,9 +713,24 @@ const projectModalContents = {
                     <br></br>
                     Frameworks/APIs: Python, OpenCV, face_recognition, Google AIY
                 </p>
+                <hr></hr>
+            </div>
+            <div className="modal-section">
+                <h5>Links</h5>
+                <Container>
+                    <Row>
+                        <Col>
+                            <a href="https://github.com/aniruddhamurali/Makerspace-Facial-Recognition" target="_blank" rel="noopener noreferrer">
+                                <FontAwesomeIcon icon={faCode}></FontAwesomeIcon>
+                                <small>Code</small>
+                            </a>
+                        </Col>
+                    </Row>
+                </Container>
             </div>
         </div>
     ),
+
     "Super Mario Bros": (
         <div>
             <div className="modal-section">
@@ -718,9 +800,24 @@ const projectModalContents = {
                 <p>
                     Languages: Processing
                 </p>
+                <hr></hr>
+            </div>
+            <div className="modal-section">
+                <h5>Links</h5>
+                <Container>
+                    <Row>
+                        <Col>
+                            <a href="https://github.com/aniruddhamurali/Super-Mario-Bros" target="_blank" rel="noopener noreferrer">
+                                <FontAwesomeIcon icon={faCode}></FontAwesomeIcon>
+                                <small>Code</small>
+                            </a>
+                        </Col>
+                    </Row>
+                </Container>
             </div>
         </div>
     ),
+
     "Pokemon Team Planner": (
         <div>
             <div className="modal-section">
@@ -744,6 +841,20 @@ const projectModalContents = {
                 <p>
                     Languages: Processing
                 </p>
+                <hr></hr>
+            </div>
+            <div className="modal-section">
+                <h5>Links</h5>
+                <Container>
+                    <Row>
+                        <Col>
+                            <a href="https://github.com/aniruddhamurali/Pokemon-Team-Planner" target="_blank" rel="noopener noreferrer">
+                                <FontAwesomeIcon icon={faCode}></FontAwesomeIcon>
+                                <small>Code</small>
+                            </a>
+                        </Col>
+                    </Row>
+                </Container>
             </div>
         </div>
     ),

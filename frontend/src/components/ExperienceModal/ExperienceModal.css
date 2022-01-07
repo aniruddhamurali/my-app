@@ -62,3 +62,14 @@
     background-color: #30B2FF;
     border-color: #30B2FF;
 }
+
+.modal-section a {
+    font-family: 'Lato';
+    font-weight: bold;
+    color: #30B2FF;
+    text-decoration: none;
+}
+
+.modal-section a small {
+    padding-left: 5px;
+}
