@@ -33,7 +33,8 @@ const projects = [
         "carousel": [
             "/images/neural-network.jpg"
         ],
-        "tags": ["machine-learning"]
+        "tags": ["machine-learning"],
+        "about": projectModalContents["Breast Cancer Diagnosis (CNN)"]
     },
     {
         "title": "Breast Cancer Diagnosis (Decision Tree)",
@@ -42,7 +43,8 @@ const projects = [
         "carousel": [
             "/images/decision-tree.png"
         ],
-        "tags": ["full-stack", "machine-learning", "front-end"]
+        "tags": ["full-stack", "machine-learning", "front-end"],
+        "about": projectModalContents["Breast Cancer Diagnosis (Decision Tree)"]
     },
     {
         "title": "Automating Makerspace Sign-in",
@@ -51,7 +53,8 @@ const projects = [
         "carousel": [
             "/images/makerspace-raspberry-pi.png"
         ],
-        "tags": ["machine-learning"]
+        "tags": ["machine-learning"],
+        "about": projectModalContents["Automating Makerspace Sign-in"]
     },
     {
         "title": "Super Mario Bros",
@@ -60,7 +63,8 @@ const projects = [
         "carousel": [
             "/images/super-mario-bros.png"
         ],
-        "tags": ["front-end"]
+        "tags": ["front-end"],
+        "about": projectModalContents["Super Mario Bros"]
     },
     {
         "title": "Pokemon Team Planner",
@@ -69,7 +73,8 @@ const projects = [
         "carousel": [
             "/images/pokemon-team-planner.png"
         ],
-        "tags": ["front-end"]
+        "tags": ["front-end"],
+        "about": projectModalContents["Pokemon Team Planner"]
     },
     {
         "title": "Flappy Bird",
@@ -78,7 +83,8 @@ const projects = [
         "carousel": [
             "/images/flappy-bird.png"
         ],
-        "tags": ["front-end"]
+        "tags": ["front-end"],
+        "about": projectModalContents["Flappy Bird"]
     },
     {
         "title": "Vectors Visualized",
@@ -87,7 +93,8 @@ const projects = [
         "carousel": [
             "/images/vector-program.png"
         ],
-        "tags": ["front-end"]
+        "tags": ["front-end"],
+        "about": projectModalContents["Vectors Visualized"]
     }
 ];
 

@@ -258,6 +258,534 @@ const projectModalContents = {
                 </p>
             </div>
         </div>
+    ),
+    "Breast Cancer Diagnosis (Decision Tree)": (
+        <div>
+            <div className="modal-section">
+                <h5>Objective</h5>
+                <p>
+                    Breast cancer is one of the leading causes of death, particularly among cancers. 
+                    However, there are problems with how breast cancer is diagnosed today. There are two 
+                    main ways of diagnosis: tumor testing and mammograms. The problem with tumor testing is 
+                    that it is time-consuming, invasive, and expensive, while the problem with mammograms is 
+                    that they only provide qualitative information, and dense breasts tend to produce blurry 
+                    images. But that's not all. According to the American Cancer Society, 1 in 5 screening 
+                    mammograms are incorrectly identified - this translates to about 80% accuracy. 93% of women
+                    with early breast cancer diagnosis survive beyond 5 years (University of Utah Health Care).
+                    This shows the importance of early, accurate, and non-invasive methods of diagnosing patients.
+                </p>
+                <hr></hr>
+            </div>
+            <div className="modal-section">
+                <h5>What I Did</h5>
+                <div><strong>Dataset:</strong></div>
+                <p>
+                    Processed University of Wisconsin breast cancer dataset of 569 samples and used them to 
+                    train and test my decision tree model.
+                </p>
+                <div><strong>Methods:</strong></div>
+                <p>
+                    Wrote a decision tree that follows the CART (Classification and Regression Tree) algorithm 
+                    from scratch. Here's what happens in CART:
+                    <ul>
+                        <li>
+                            Creates a binary decision tree
+                        </li>
+                        <li>
+                            One parameter is checked at each node
+                        </li>
+                        <li>
+                            Gini Index evaluates parameters
+                        </li>
+                        <li>
+                            Prediction made at terminal nodes
+                        </li>
+                    </ul>
+                </p>
+                <p>
+                    Tested decision tree model with cross-validation. Performed a point-biserial correlation 
+                    test to understand how each of the 10 features correlate with malignancy.
+                </p>
+                <div><strong>Products:</strong></div>
+                <ul>
+                    <li>
+                        Wrote research paper about the work done
+                    </li>
+                    <li>
+                        Developed prototype iOS app
+                    </li>
+                </ul>
+                <hr></hr>
+            </div>
+            <div className="modal-section">
+                <h5>Results</h5>
+                <div><strong>Decision Tree Model:</strong></div>
+                <ul>
+                    <li>
+                        Model achieved 90-93% accuracy
+                    </li>
+                    <li>
+                        Concave points was used for the root node
+                    </li>
+                    <li>
+                        Compactness, symmetry, and fractal dimension were not included in the model
+                    </li>
+                </ul>
+                <div><strong>Statistical Analyses:</strong></div>
+                <Table striped hover>
+                    <thead>
+                        <tr>
+                            <th>Parameter</th>
+                            <th>rpb</th>
+                            <th>t-value</th>
+                            <th>p-value</th>
+                            <th>p &lt 0.05</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Radius</td>
+                            <td>0.73</td>
+                            <td>25.436</td>
+                            <td>~0</td>
+                            <td>Yes</td>
+                        </tr>
+                        <tr>
+                            <td>Texture</td>
+                            <td>0.415</td>
+                            <td>10.867</td>
+                            <td>~0</td>
+                            <td>Yes</td>
+                        </tr>
+                        <tr>
+                            <td>Texture</td>
+                            <td>0.415</td>
+                            <td>10.867</td>
+                            <td>~0</td>
+                            <td>Yes</td>
+                        </tr>
+                        <tr>
+                            <td>Perimeter</td>
+                            <td>0.743</td>
+                            <td>26.405</td>
+                            <td>~0</td>
+                            <td>Yes</td>
+                        </tr>
+                        <tr>
+                            <td>Area</td>
+                            <td>0.709</td>
+                            <td>23.939</td>
+                            <td>~0</td>
+                            <td>Yes</td>
+                        </tr>
+                        <tr>
+                            <td>Smoothness</td>
+                            <td>0.359</td>
+                            <td>9.146</td>
+                            <td>~0</td>
+                            <td>Yes</td>
+                        </tr>
+                        <tr>
+                            <td>Compactness</td>
+                            <td>0.597</td>
+                            <td>17.698</td>
+                            <td>~0</td>
+                            <td>Yes</td>
+                        </tr>
+                        <tr>
+                            <td>Concavity</td>
+                            <td>0.696</td>
+                            <td>23.104</td>
+                            <td>~0</td>
+                            <td>Yes</td>
+                        </tr>
+                        <tr>
+                            <td>Concave-points</td>
+                            <td>0.777</td>
+                            <td>29.354</td>
+                            <td>~0</td>
+                            <td>Yes</td>
+                        </tr>
+                        <tr>
+                            <td>Symmetry</td>
+                            <td>0.33</td>
+                            <td>8.338</td>
+                            <td>~0</td>
+                            <td>Yes</td>
+                        </tr>
+                        <tr>
+                            <td>Fractal Dimension</td>
+                            <td>-0.013</td>
+                            <td>-0.306</td>
+                            <td>0.76</td>
+                            <td>No</td>
+                        </tr>
+                    </tbody>
+                </Table>
+                <p>
+                    Note: rpb is the association between a continuous variable and a binary variable.
+                    <br></br>
+                    Note: Conditions for t-test are randomness, independence, and normality. In this case, 
+                    randomness is unethical so we won't worry about that. We can assume independence and the 
+                    data distribution for each feature is approximately normal.
+                </p>
+                <p>
+                    Only fractal dimension did not show any correlation with breast tumor malignancy. Concave 
+                    points, perimeter, radius, area, and concavity showed relatively high correlation coefficients.
+                </p>
+                <hr></hr>
+            </div>
+            <div className="modal-section">
+                <h5>Limitations</h5>
+                <ul>
+                    <li>
+                        The model could be prone to human error. Minor changes in measurement can yield different results.
+                    </li>
+                    <li>
+                        The dataset only had 569 samples. While the model did achieve high accuracy, a higher sample size 
+                        would allow for more reliable results.
+                    </li>
+                </ul>
+                <hr></hr>
+            </div>
+            <div className="modal-section">
+                <h5>Awards</h5>
+                <ul>
+                    <li>Connecticut Science and Engineering Fair (CSEF)</li>
+                        <ul>
+                            <li>1st place in Mathematics Category</li>
+                            <li>3rd place in Computer Science Category</li>
+                            <li>National special awards</li>
+                                <ul>
+                                    <li>Intel Excellence in Computer Science Award</li>
+                                    <li>Mu Alpha Theta Award</li>
+                                    <li>U.S. Metric Association Award</li>
+                                </ul>
+                        </ul>
+                    <li>Staples High School Sameer Mathur Research Award (excellence in research)</li>
+                    <li>Paper published in International Journal of Scientific and Engineering Research (IJSER)</li>
+                </ul>
+            </div>
+            <div className="modal-section">
+                <h5>Technologies and Tools</h5>
+                <p>
+                    Languages: Python, Swift
+                    <br></br>
+                    Frameworks/APIs: Flask
+                </p>
+            </div>
+        </div>
+    ),
+    "Breast Cancer Diagnosis (CNN)": (
+        <div>
+            <div className="modal-section">
+                <h5>Objective</h5>
+                <p>
+                    This project looks at the same problem as the decision tree project. We want to see if we can 
+                    accurately predict the presence of breast cancer from images, specifically checking for invasive 
+                    ductal carcinoma (IDC). IDC is the most common form of breast cancer, making up about 80% of all 
+                    cases.
+                </p>
+                <hr></hr>
+            </div>
+            <div className="modal-section">
+                <h5>What I Did</h5>
+                <div><strong>Dataset:</strong></div>
+                <p>
+                    Processed Case Western Reserve University breast cancer image dataset of 277,524 samples and used 
+                    them to train a convolutional neural network (CNN).
+                </p>
+                <div><strong>Methods:</strong></div>
+                <p>
+                    Wrote a CNN in Keras. Here's what happens in a CNN:
+                    <ul>
+                        <li>
+                            Input Layer: Puts images into the neural networks
+                        </li>
+                        <li>
+                            Convolutional Layer: Applies various filters to extract features
+                        </li>
+                        <li>
+                            ReLu: A piecewise linear function that serves as an activation function to 
+                            determine which neurons "fire".
+                        </li>
+                        <li>
+                            Pooling Layer: Reduces feature map size
+                        </li>
+                        <li>
+                            Dropout Layer: Reduces size of neural network to prevent overfitting
+                        </li>
+                        <li>
+                            Flatten Layer: Converts input to the layer into a 1-dimensional vector array
+                        </li>
+                        <li>
+                            Fully Connected Layer: Neurons have full connections to all activations in the 
+                            previous layer
+                        </li>
+                        <li>
+                            Output Layer: 2 neurons that determine whether the prediction is malignant or benign
+                        </li>
+                    </ul>
+                </p>
+                <p>
+                    Tested accuracy and loss of model over 100 epochs. Used activations to visualize features at each 
+                    layer in the CNN. Wrote research paper about the work done.
+                </p>
+                <hr></hr>
+            </div>
+            <div className="modal-section">
+                <h5>Results</h5>
+                <div><strong>Decision Tree Model:</strong></div>
+                <ul>
+                    <li>
+                        Model achieved 88-90% accuracy
+                    </li>
+                    <li>
+                        Features used to determine malignant/benign were visualized to help understand 
+                        why the CNN made its prediction
+                    </li>
+                    <li>
+                        CNN also returns probability of each of the two classes
+                    </li>
+                </ul>
+                <div><strong>Confusion Matrix:</strong></div>
+                <Table striped hover>
+                    <thead>
+                        <tr>
+                            <th>Statistic</th>
+                            <th>Formula</th>
+                            <th>Value</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>True Positive Rate</td>
+                            <td>(True Positive)/(True Positive + False Negative)</td>
+                            <td>0.85</td>
+                        </tr>
+                        <tr>
+                            <td>False Positive Rate</td>
+                            <td>(False Positive)/(True Negative + False Positve)</td>
+                            <td>0.17</td>
+                        </tr>
+                        <tr>
+                            <td>True Negative Rate</td>
+                            <td>(True Negative)/(True Negative + False Positive)</td>
+                            <td>0.83</td>
+                        </tr>
+                        <tr>
+                            <td>False Negative Rate</td>
+                            <td>(False Negative)/(True Positive + False Negative)</td>
+                            <td>0.15</td>
+                        </tr>
+                        <tr>
+                            <td>Prevalence</td>
+                            <td>(False Negative + True Positive)/total</td>
+                            <td>0.50</td>
+                        </tr>
+                    </tbody>
+                </Table>
+                <hr></hr>
+            </div>
+            <div className="modal-section">
+                <h5>Awards</h5>
+                <ul>
+                    <li>CT STEM Fair</li>
+                        <ul>
+                            <li>1st place in Health Category</li>
+                            <li>Top 5 Project</li>
+                            <li>Mu Alpha Theta Award</li>
+                        </ul>
+                    <li>Chosen to present research at Staples High School Science Symposium</li>
+                    <li>Paper published in International Journal of Scientific and Engineering Research (IJSER)</li>
+                </ul>
+            </div>
+            <div className="modal-section">
+                <h5>Technologies and Tools</h5>
+                <p>
+                    Languages: Python
+                    <br></br>
+                    Frameworks/APIs: Keras, OpenCV, Scikit-learn, Pandas, Matplotlib
+                </p>
+            </div>
+        </div>
+    ),
+    "Automating Makerspace Sign-in": (
+        <div>
+            <div className="modal-section">
+                <h5>Objective</h5>
+                <p>
+                    I volunteered at the Westport Public Library's Makerspace when I was in high school. While 
+                    there, myself and the manager of the Makerspace noticed that some materials were being stolen 
+                    from the Makerspace. We had a system in place where people who had access to the Makerspace 
+                    would sign-in on a sheet every time they came into the space, but we noticed that many people 
+                    forgot to sign themselves in. So, we thought it would be cool to have an automated system that 
+                    could detect and sign-in people automatically. Such a system would inform us of who has been in 
+                    the Makerspace and at what times. It would also detect if someone who is not in the system was 
+                    in the Makerspace.
+                </p>
+                <hr></hr>
+            </div>
+            <div className="modal-section">
+                <h5>What I Did</h5>
+                <ul>
+                    <li>
+                        Wrote a script on Raspberry Pi and Google AIY to perform facial recognition 
+                        on people who enter the Makerspace. 
+                    </li>
+                    <li>
+                        Developed process to add Makerspace Makers, volunteers, and workers into the system.
+                    </li>
+                </ul>
+                <hr></hr>
+            </div>
+            <div className="modal-section">
+                <h5>Technologies and Tools</h5>
+                <p>
+                    Languages: Python
+                    <br></br>
+                    Frameworks/APIs: Python, OpenCV, face_recognition, Google AIY
+                </p>
+            </div>
+        </div>
+    ),
+    "Super Mario Bros": (
+        <div>
+            <div className="modal-section">
+                <h5>What I Did</h5>
+                <ul>
+                    <li>
+                        Recreated the first level of Super Mario Bros.
+                    </li>
+                    <li>
+                        Created classes for each object/sprite.
+                    </li>
+                    <li>
+                        Changed Mario's appearance and added functions when given a power-up.
+                    </li>
+                    <li>
+                        Mario can walk, run, jump, crouch, hit blocks, stomp on enemies, and go down the 
+                        flag at the end of the level. Gravity also exists.
+                    </li>
+                    <li>
+                        Added custom features such as hidden blocks and a poison mushroom that takes our Mario.
+                    </li>
+                    <li>
+                        Added music and sound effects
+                    </li>
+                </ul>
+                <hr></hr>
+            </div>
+            <div className="modal-section">
+                <h5>Potential Improvements</h5>
+                <ul>
+                    <li>
+                        Collisions were very difficult to do properly. There are occassions where if you run too fast,
+                        Mario may accidentally go into the ground. Collision is particularly an issue when Mario is 
+                        falling - if he falls too fast, he can go straight through the ground and the game will say Mario 
+                        lost a life. 
+                        <ul>
+                            <li>
+                                It would probably be a good idea to add terminal velocity to limit how fast Mario can 
+                                fall. That being said, a good method for quick collision detection is still needed.
+                            </li>
+                            <li>
+                                Working on this project made be realize how difficult real-world game development 
+                                can be - there are so many different things you need to take care of such as object 
+                                collision, and animations.
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        Sometimes when Mario lands on one of the blocks in the air, the jump sprite is shown instead 
+                        of the standing sprite.
+                    </li>
+                </ul>
+                <hr></hr>
+            </div>
+            <div className="modal-section">
+                <h5>Technologies and Tools</h5>
+                <p>
+                    Languages: Processing
+                </p>
+            </div>
+        </div>
+    ),
+    "Pokemon Team Planner": (
+        <div>
+            <div className="modal-section">
+                <h5>What I Did</h5>
+                <ul>
+                    <li>
+                        Determine the type advantages, weaknesses, and immunities of each Pokemon as well as 
+                        the counts of each.
+                    </li>
+                    <li>
+                        Edited and loaded Pokemon images.
+                    </li>
+                    <li>
+                        Pokemon added to team on screen when name is entered in search bar.
+                    </li>
+                </ul>
+                <hr></hr>
+            </div>
+            <div className="modal-section">
+                <h5>Technologies and Tools</h5>
+                <p>
+                    Languages: Processing
+                </p>
+            </div>
+        </div>
+    ),
+    "Flappy Bird": (
+        <div>
+            <div className="modal-section">
+                <h5>What I Did</h5>
+                <ul>
+                    <li>
+                        Recreated the Flappy Bird game.
+                    </li>
+                    <li>
+                        Loaded and animated bird and pipe sprites.
+                    </li>
+                    <li>
+                        Keep track of score
+                    </li>
+                </ul>
+                <hr></hr>
+            </div>
+            <div className="modal-section">
+                <h5>Technologies and Tools</h5>
+                <p>
+                    Languages: Processing
+                </p>
+            </div>
+        </div>
+    ),
+    "Vectors Visualized": (
+        <div>
+            <div className="modal-section">
+                <h5>What I Did</h5>
+                <ul>
+                    <li>
+                        Created interface where a user can draw out two vectors
+                    </li>
+                    <li>
+                        Vector components, magnitude, and various computations are shown
+                    </li>
+                    <li>
+                        Sum or difference vector is shown on the graph
+                    </li>
+                </ul>
+                <hr></hr>
+            </div>
+            <div className="modal-section">
+                <h5>Technologies and Tools</h5>
+                <p>
+                    Languages: Processing
+                </p>
+            </div>
+        </div>
     )
 }
 
