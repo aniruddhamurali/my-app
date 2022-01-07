@@ -31,7 +31,12 @@ const projects = [
         "description": "Image recognition for Invasive Ductal Carcinoma",
         "image": "/images/neural-network.jpg",
         "carousel": [
-            "/images/neural-network.jpg"
+            "/images/neural-network.jpg",
+            "/images/idc-images.png",
+            "/images/cnn-accuracy-loss.png",
+            "/images/confusion-matrix.png",
+            "/images/feature-visualization-positive.png",
+            "/images/feature-visualization-negative.png",
         ],
         "tags": ["machine-learning"],
         "about": projectModalContents["Breast Cancer Diagnosis (CNN)"]
@@ -41,7 +46,8 @@ const projects = [
         "description": "Predicts malignancy of a breast tumor with iOS app",
         "image": "/images/decision-tree.png",
         "carousel": [
-            "/images/decision-tree.png"
+            "/images/decision-tree.png",
+            "/images/decision-tree-mobile-app.png"
         ],
         "tags": ["full-stack", "machine-learning", "front-end"],
         "about": projectModalContents["Breast Cancer Diagnosis (Decision Tree)"]
@@ -61,7 +67,11 @@ const projects = [
         "description": "Recreated World 1-1 of the original Super Mario Bros. game",
         "image": "/images/super-mario-bros.png",
         "carousel": [
-            "/images/super-mario-bros.png"
+            "/images/super-mario-bros.png",
+            "/images/powerups.png",
+            "/images/hidden-blocks.png",
+            "/images/complete-level.png",
+            "/images/game-over.png"
         ],
         "tags": ["front-end"],
         "about": projectModalContents["Super Mario Bros"]

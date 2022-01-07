@@ -668,10 +668,13 @@ const projectModalContents = {
                         flag at the end of the level. Gravity also exists.
                     </li>
                     <li>
-                        Added custom features such as hidden blocks and a poison mushroom that takes our Mario.
+                        Added custom features such as hidden blocks and a poison mushroom that takes out Mario.
                     </li>
                     <li>
-                        Added music and sound effects
+                        Added music and sound effects.
+                    </li>
+                    <li>
+                        Keep track of coins collected, score, and time remaining.
                     </li>
                 </ul>
                 <hr></hr>
@@ -687,18 +690,25 @@ const projectModalContents = {
                         <ul>
                             <li>
                                 It would probably be a good idea to add terminal velocity to limit how fast Mario can 
-                                fall. That being said, a good method for quick collision detection is still needed.
+                                fall. That being said, a good method for quick collision detection is still needed. Turns 
+                                out, collision detection is quite a big thing in game development, and there are various 
+                                algorithms out there for collisions between various objects.
                             </li>
                             <li>
-                                Working on this project made be realize how difficult real-world game development 
-                                can be - there are so many different things you need to take care of such as object 
-                                collision, and animations.
+                                In games like Pong, a big part of why collisions are easier to deal with is that there are 
+                                very few collisions you need to check for. But in a game like Mario, Mario and other
+                                objects can collide with many different things. There are so many objects that can collide 
+                                that you have to check for many different potential collisions - and I think this is the problem 
+                                I'm dealing with. For example, when Mario collides with another object, the program is checking 
+                                for a collision between Mario and almost ALL objects in the level. This is quite inefficient, 
+                                and in some cases, by the time the program detects the occurring collision with Mario, Mario may 
+                                have already went "through" the object.
                             </li>
                         </ul>
                     </li>
                     <li>
                         Sometimes when Mario lands on one of the blocks in the air, the jump sprite is shown instead 
-                        of the standing sprite.
+                        of the standing sprite. This may also have something to do with collision detection.
                     </li>
                 </ul>
                 <hr></hr>
@@ -749,7 +759,7 @@ const projectModalContents = {
                         Loaded and animated bird and pipe sprites.
                     </li>
                     <li>
-                        Keep track of score
+                        Keep track of score.
                     </li>
                 </ul>
                 <hr></hr>
@@ -768,13 +778,13 @@ const projectModalContents = {
                 <h5>What I Did</h5>
                 <ul>
                     <li>
-                        Created interface where a user can draw out two vectors
+                        Created interface where a user can draw out two vectors.
                     </li>
                     <li>
-                        Vector components, magnitude, and various computations are shown
+                        Vector components, magnitude, and various computations are shown.
                     </li>
                     <li>
-                        Sum or difference vector is shown on the graph
+                        Sum or difference vector is shown on the graph.
                     </li>
                 </ul>
                 <hr></hr>
