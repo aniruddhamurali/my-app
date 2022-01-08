@@ -89,3 +89,43 @@ nlu:
     - are you a human?
     - am I talking to a bot?
     - am I talking to a human?
+
+- intent: ask_birthday
+  examples: |
+    - when is your birthday?
+    - when is Aniruddha's birthday?
+    - birthday
+    - birthday?
+    - day of birth
+    - date of birth
+    - what is your day of birth?
+    - what is Aniruddha's day of birth?
+    - what is your date of birth?
+    - what is Aniruddha's date of birth?
+
+- intent: ask_school
+  examples: |
+    - where do you go to school?
+    - where does Aniruddha go to school?
+    - school?
+    - where do you study?
+    - where does Aniruddha study?
+    - what university do you go to?
+    - what university does Aniruddha go to?
+    - what do you study?
+    - what are you studying?
+    - what does Aniruddha study?
+    - what is Aniruddha studying?
+    - what is your major?
+    - what is Aniruddha's major?
+    - major?
+    - concentration?
+    - what do you study at Georgia Tech?
+    - what does Aniruddha study at Georgia Tech?
+
+- intent: ask_birth_location
+  examples: |
+    - where were you born?
+    - where were you bron?
+    - where was Aniruddha born?
+    - birth location?

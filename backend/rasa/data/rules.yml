@@ -11,3 +11,18 @@ rules:
   steps:
   - intent: bot_challenge
   - action: utter_iamabot
+
+- rule: Say birthday when asked about birthday
+  steps:
+  - intent: ask_birthday
+  - action: utter_birthday
+
+- rule: Say school and major when asked about school
+  steps:
+  - intent: ask_school
+  - action: utter_school
+
+- rule: Say place of birth when asked where he was born
+  steps:
+  - intent: ask_birth_location
+  - action: utter_birth_location

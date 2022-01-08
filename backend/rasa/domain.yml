@@ -8,6 +8,9 @@ intents:
   - mood_great
   - mood_unhappy
   - bot_challenge
+  - ask_birthday
+  - ask_school
+  - ask_birth_location
 
 responses:
   utter_greet:
@@ -29,6 +32,16 @@ responses:
   utter_iamabot:
   - text: "I am a bot, powered by Rasa."
 
+  utter_birthday:
+  - text: "Aniruddha's birthday is March 8th, 2001."
+
+  utter_school:
+  - text: "Aniruddha is currently pursuing an undergraduate degree in computer science at Georgia Tech. Prior to college, he went to Staples High School in Westport, CT."
+
+  utter_birth_location:
+  - text: "Aniruddha was born in Sacramento, California."
+
+  
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
