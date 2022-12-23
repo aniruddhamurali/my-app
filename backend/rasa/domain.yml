@@ -27,10 +27,10 @@ responses:
   - text: "Great, carry on!"
 
   utter_goodbye:
-  - text: "Bye"
+  - text: "Bye!"
 
   utter_iamabot:
-  - text: "I am a bot, powered by Rasa."
+  - text: "I am Ani, a bot powered by Rasa."
 
   utter_birthday:
   - text: "Aniruddha's birthday is March 8th, 2001."
@@ -41,7 +41,7 @@ responses:
   utter_birth_location:
   - text: "Aniruddha was born in Sacramento, California."
 
-  
+
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
