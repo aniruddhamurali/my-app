@@ -36,7 +36,7 @@ class Footer extends Component {
                             <Stack gap={1}>
                                 <div className="category">OTHER</div>
                                 <div className="footer-link">Blog</div>
-                                <div className="footer-link">Resume</div>
+                                <div className="footer-link"><a href="files/Resume-Aniruddha-Murali.pdf" target="_blank">Resume</a></div>
                             </Stack>
                         </Col>
                         <Col xs={12} sm={12} md={3} lg={3} className="col">
