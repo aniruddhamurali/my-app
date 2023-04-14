@@ -2,8 +2,19 @@ import experienceModalContents from "./experienceModalContents";
 
 const experiences = [
     {
+        "name": "Amazon",
+        "role": "Software Engineering Intern",
+        "location": "Seattle, WA",
+        "timeframe": "May 2023 - Aug 2023",
+        "image": "images/Amazon.png",
+        "carousel": [
+            "images/Amazon.png"
+        ],
+        "about": experienceModalContents["Amazon May 2023 - Aug 2023"]
+    },
+    {
         "name": "Goldman Sachs",
-        "role": "Incoming Quantitative Strategist Intern",
+        "role": "Quantitative Strategist Intern",
         "location": "Dallas, TX",
         "timeframe": "Jun 2022 - Aug 2022",
         "image": "images/Goldman-Sachs.png",

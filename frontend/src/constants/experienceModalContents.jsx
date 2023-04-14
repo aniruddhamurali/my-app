@@ -9,10 +9,191 @@ const experienceModalContents = {
                 <h5>What I Did</h5>
                 <ul>
                     <li>
-                        Risk Division
+                        Developed clustering algorithms based on hierarchical clustering and K-Means to group 
+                        equity derivatives into clusters based on similarity and created similarity metrics for 
+                        comparison of equity risk factors. Algorithms written in Goldman’s proprietary language, Slang.
+                    </li>
+                    <li>
+                        Brainstormed business applications for clusters. Clusters can be used in correlational 
+                        backtesting to check if risk models are capturing correlations between equity risk factors and streamline the process of investigating instances where risk models underestimate risk for certain equity derivatives. 
+                    </li>
+                    <li>
+                        Implemented backtesting on credit risk models to assess their performance and examine 
+                        potential issues.
+                    </li>
+                    <li>
+                        Presented work to 5 Managing Directors as well as other senior executives.
                     </li>
                 </ul>
                 <hr></hr>
+            </div>
+            <div className="modal-section">
+                <h5>How Does It All Work? What was the Process?</h5>
+                <div><strong>The General Idea:</strong></div>
+                <p>
+                    This one is a bit tough to explain in a few words so I will start off by discussing concepts
+                    that are relevant to the project. In investing, the term exposure refers to the risk of a 
+                    particular investment in some derivative. There are two kinds of exposure we are concerned
+                    with: potential exposure and current exposure. Current exposure (CE) is the exposure of a derivative
+                    at the current moment in time. Potential exposure (PE) is the exposure we predict. For instance, if 
+                    we are looking at 2 week PE, that means we are predicting the exposure 2 weeks from now. We have 
+                    something called an exception every time the CE is greater than the PE because that means the actual 
+                    risk exceeded the risk we predicted - this is where you could lose money. Since that is concerning, we 
+                    want to see where our models had exceptions and analyze those exceptions to understand why they occurred.
+                </p>
+                <p>
+                    On the team I was on, a big part of their job is to analyze these exceptions using their elaborate 
+                    exception investigation process. During my internship, I also helped out with these tasks. One insight I 
+                    found was that some stocks had exceptions because of various COVID news. There were some instances, for 
+                    example, where the stock increased higher than expcted because of either higher than expected employment 
+                    growth or positive vaccine news. These stocks were on the buy side - you want to buy for as low as 
+                    possible, so higher risk is associated with higher prices. However, on the sell side, you want to sell 
+                    for as high as possible, so higher risk is associated with lower prices.
+                </p>
+                <p>
+                    This process is extremely tedious. You have to look at all exceptions for various derivatives in various 
+                    product groups, so it takes a vary long time. This is where my project comes into play. I worked on 
+                    developing clustering algorithms that could cluster exceptions of various derivatives based on the times 
+                    and magnitudes of those exceptions. My proposal was that instead of investigating exceptions one at a time,
+                    you could instead investgiate clusters of exceptions at a time; since the exceptions in each cluster are 
+                    similar, there's a good chance that the reasoning for those exceptions are also similar. In fact, this was 
+                    something I noticed while helping with the investigation process, which is why I worked on presenting this 
+                    proposal.
+                </p>
+                <br></br>
+                <div><strong>The Algorithms:</strong></div>
+                <p>
+                    In clustering, you run some sort of algorithm that groups data points together into clusters based 
+                    on some sort of similarity metric you use to compare data points. During my internship, I primarily  
+                    worked with two clustering: K-means and hierachical clustering.
+                </p>
+                <p>
+                    In K-Means, you perform the following steps:
+                    <ol>
+                        <li>
+                            Determine the number of clusters k.
+                        </li>
+                        <li>
+                            Choose k data points at random and assign each point to its own cluster.
+                        </li>
+                        <li>
+                            Assign each of the remaining data points to one of the k clusters.
+                        </li>
+                        <li>
+                            Compute the cluster centroids (middle of the cluster) by averaging all the 
+                            data points
+                        </li>
+                        <li>
+                            Repeat the following until you've reached a certain number of iterations:
+                            <li>
+                                Assign each data point to a cluster based on the calculated centroids that 
+                                represent the new clusters
+                            </li>
+                            <li>
+                                Calculate the centroids of these clusters using the data points in the cluster 
+                            </li>
+                        </li>
+                    </ol>
+                </p>
+                <p>
+                    There are two approaches to hierarchical clustering: agglomerative and divisive. The approach I 
+                    used was agglomerative (bottom-up):
+                    <ol>
+                        <li>
+                            Assign each data point to its own cluster. If you have n data points, you should have n 
+                            clusters at the beginning.
+                        </li>
+                        <li>
+                            Merge the closest pair of clusters. Closest pair is based on the similarity metric you use.
+                        </li>
+                        <li>
+                            Keep repeating the above step until you are left with one cluster left.
+                        </li>
+                        <li>
+                            At this point, you have a "hierarchy" of clusters - you have what the clusters look like for 
+                            n clusters, n-1 clusters, ..., 2 clusters, and 1 cluster. Use an index to determine which 
+                            number of clusters resulting in the best clustering.
+                        </li>
+                    </ol> 
+                </p>
+                <p>
+                    Now, we have to provide these clustering algorithms with a similarity metric to work with. 
+                    For each derivative, I calculated the CE-PE for each date - this gives a value that determines 
+                    if there was an exception or not. So, when comparing various derivatives, we are comparing the 
+                    similarity of the CE-PE line graphs for those derivatives. Here are some similarity metrics I 
+                    tested out:
+                    <ul>
+                        <li>
+                            Correlation: We calculate the R-value of the two graphs. R is between -1 and 1, where 
+                            being close to -1 implies a strong inverse relationship while being close to 1 implies a 
+                            strong direct relationship. The closer R is to 1, the higher the similarity.
+                        </li>
+                        <li>
+                            Dynamic time warping (DTW): Typical similarity algorithms will compare points on two graphs at the 
+                            same x-value. However, there are many times where the two graphs have very similar shapes 
+                            but are essentially "shifted" versions of each other. DTW uses dynamic programming with the 
+                            following recursive equation: 
+                            <p>
+                                DTW[i, j] = cost + minimum(DTW[i-1, j  ], DTW[i  , j-1], DTW[i-1, j-1]), 
+                                cost = |s[i] - t[j]|
+                            </p>
+                            where DTW[i, j] is the distance between s[1:i] and t[1:j] and s and t are the two line graphs being 
+                            compared. You're basically looking at each pair of points in s and t and adding the cost to the 
+                            minimum cost of keeping the current point in s, keeping the current point in t, or not keeping either 
+                            point.
+                        </li>
+                        <li>
+                            Custom metric: I made my own metric that calculates a similarity score between two graphs based on 
+                            how close potentially corresponding exceptions in each graph are and how similar the magnitudes of 
+                            those potentially corresponding exception are.
+                        </li>
+                    </ul>
+                </p>
+                <p>
+                    For hierarchical clustering, we get what the clusters look like for each number of clusters from 1 to n. 
+                    We can also do something similar for K-Means where we run the K-Means, setting k as each value from 1 to n 
+                    for each iteration. For the final step, we need to determine what number of clusters was optimal. I used 
+                    a metric called the Dunn Index which uses both inter-cluster distance and intra-cluster distance in 
+                    calculating its clustering score. inter-cluster distance is the distance between clusters and intra-cluster 
+                    distance is the distance between points within a cluster.
+                    <p>
+                        Dunn Index = (minimum inter-cluster distance) / (maximum intra-cluster distance)
+                    </p>
+                    So why does this formula help us determine what makes a good clustering? Let's first think about what makes 
+                    a good clustering. We want our clusters to be distinct and far apart from each other, meaning they should 
+                    have high inter-cluster distances. We also want our clusters to be compact, meaning we want low intra-cluster 
+                    distances between points. The Dunn Index formula takes the worst case scenario for each of these two ideas, 
+                    so the better the worst case scenarios are, the higher the Dunn Index value. The higher the Dunn Index, 
+                    the better the clustering is. Notice how a lower maximum intra-cluster distance in the denominator results in a 
+                    higher Dunn Index, and how a higher minimum inter-cluster distance in the numerator also results in a 
+                    higher Dunn Index. We calculate the Dunn Index for each number of clusters and from there determine which 
+                    number of clusters had the highest Dunn Index - this number of clusters will be considered the most optimal 
+                    clustering.
+                </p>
+                <p>
+                    Once we have our optimal clustering, we can check each cluster to see if it makes sense using known information. 
+                    For instance, many of the clusters I generated grouped several tech companies together, or companies that 
+                    relied on similar resources such as oil.
+                </p>
+                <hr></hr>
+                <div className="modal-section">
+                    <h5>Results</h5>
+                    <ul>
+                        <li>
+                            I presented my clustering insights and proposal to modify the investigation process to focus on 
+                            investigating clusters of exceptions instead of one exception at a time to a couple Managing 
+                            Directors at Goldman!
+                        </li>
+                        <li>
+                            I learned so much about the world of finance/investing at what's considered to be the best investment 
+                            bank in the world.
+                        </li>
+                        <li>
+                            I learned Goldman's propriety language, Slang
+                        </li>
+                    </ul>
+                    <hr></hr>
+                </div>
             </div>
         </div>
     ),
