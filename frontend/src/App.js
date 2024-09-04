@@ -67,7 +67,7 @@ function App() {
         
 
         <Footer></Footer>
-        <Chat></Chat>
+        {/* <Chat></Chat> */}
       </div>
     </Router>
   );
