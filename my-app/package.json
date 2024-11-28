@@ -1,7 +1,7 @@
 {
   "name": "client",
   "version": "0.1.0",
-  "homepage": "http://aniruddhamurali.github.io/aniruddhamurali.github.io",
+  "homepage": "http://aniruddhamurali.github.io/my-app",
   "private": true,
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.15.4",
