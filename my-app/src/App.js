@@ -5,17 +5,14 @@ import {
   BrowserRouter as Router,
   Routes,
   Route,
-  Link,
-  NavLink
 } from "react-router-dom";
 
-import {Navbar, Nav, Container, NavDropdown} from 'react-bootstrap';
+import {Navbar, Nav, Container} from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.css';
 import styled from "styled-components";
 
 import Home from './components/Home';
 import Footer from './components/Footer';
-import Chat from './components/Chat';
 
 
 const Styles = styled.div`

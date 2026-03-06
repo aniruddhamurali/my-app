@@ -1,5 +1,5 @@
 import { Container, Col, Row } from "react-bootstrap";
-import {faLink, faFilePdf, faCode} from '@fortawesome/free-solid-svg-icons';
+import {faLink, faCode} from '@fortawesome/free-solid-svg-icons';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 
 const experienceModalContents = {
