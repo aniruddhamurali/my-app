@@ -120,7 +120,7 @@ class Home extends Component {
             var e = new Neuron(x2, y4);
             var f = new Neuron(x2, y3);
             var g = new Neuron(x2, y2);
-            var h = new Neuron(x2, y1);
+            let h = new Neuron(x2, y1);
 
             var i = new Neuron(x3, y5);
             var j = new Neuron(x3, y4);
@@ -229,7 +229,7 @@ class Home extends Component {
             var e = new Neuron(x2, y4);
             var f = new Neuron(x2, y3);
             var g = new Neuron(x2, y2);
-            var h = new Neuron(x2, y1);
+            let h = new Neuron(x2, y1);
 
             var i = new Neuron(x3, y5);
             var j = new Neuron(x3, y4);

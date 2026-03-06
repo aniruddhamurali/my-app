@@ -42,9 +42,9 @@ class Footer extends Component {
                         <Col xs={12} sm={12} md={3} lg={3} className="col">
                             <div className="category">CONTACT</div>
                             <div className="d-flex flex-wrap justify-content-center icons">
-                                <a href="https://www.instagram.com/aniruddhamurali/" target="_blank"><i class="fab fa-instagram-square fa-2x"></i></a>
-                                <a href="https://twitter.com/AniruddhaMurali" target="_blank"><i class="fab fa-twitter-square fa-2x" ></i></a>
-                                <a href="https://www.linkedin.com/in/aniruddhamurali/" target="_blank"><i class="fab fa-linkedin fa-2x"></i></a>
+                                <a href="https://www.instagram.com/aniruddhamurali/" target="_blank" rel="noreferrer"><i class="fab fa-instagram-square fa-2x"></i></a>
+                                <a href="https://twitter.com/AniruddhaMurali" target="_blank" rel="noreferrer"><i class="fab fa-twitter-square fa-2x" ></i></a>
+                                <a href="https://www.linkedin.com/in/aniruddhamurali/" target="_blank" rel="noreferrer"><i class="fab fa-linkedin fa-2x"></i></a>
                                 <a href="mailto:aniruddha.murali@gmail.com?"><i class="fas fa-envelope fa-2x"></i></a>
                             </div>
                         </Col>
