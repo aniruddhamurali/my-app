@@ -11,7 +11,7 @@ class IntroContainer extends Component {
     render() {
         return (
             <Container className="intro" fluid>
-                <img className="introImage" src="./images/aniruddha2.JPG" alt=""/>
+                <img className="introImage" src={process.env.PUBLIC_URL + "/images/aniruddha2.jpg"} alt=""/>
                 <br></br>
                 <Row>
                     <Col className="introText" xs={12} md={5}>

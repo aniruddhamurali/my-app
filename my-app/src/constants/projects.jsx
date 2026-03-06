@@ -4,10 +4,10 @@ const projects = [
     {
         "title": "Musks Musings",
         "description": "Predicts what to do with TSLA stock given Elon Musk tweet",
-        "image": "/images/elonmusk-tsla.png",
+        "image": `${process.env.PUBLIC_URL}/images/elonmusk-tsla.png`,
         "carousel": [
-            "/images/musk-musings-clustering.png",
-            "/images/musk-musings-neural-net-result.png"
+            `${process.env.PUBLIC_URL}/images/musk-musings-clustering.png`,
+            `${process.env.PUBLIC_URL}/images/musk-musings-neural-net-result.png`
         ],
         "tags": ["machine-learning"],
         "about": projectModalContents["Musks Musings"]
@@ -15,13 +15,13 @@ const projects = [
     {
         "title": "COVID-19 Tracker",
         "description": "Tracks relevant Covid-19 data",
-        "image": "/images/covid19tracker.png",
+        "image": `${process.env.PUBLIC_URL}/images/covid19tracker.png`,
         "carousel": [
-            "/images/covid19tracker.png", 
-            "/images/covid19tracker2.png", 
-            "/images/covid19tracker3.png", 
-            "/images/covid19tracker4.png", 
-            "/images/covid19tracker5.png"
+            `${process.env.PUBLIC_URL}/images/covid19tracker.png`,
+            `${process.env.PUBLIC_URL}/images/covid19tracker2.png`,
+            `${process.env.PUBLIC_URL}/images/covid19tracker3.png`,
+            `${process.env.PUBLIC_URL}/images/covid19tracker4.png`,
+            `${process.env.PUBLIC_URL}/images/covid19tracker5.png`
         ],
         "tags": ["full-stack", "machine-learning", "front-end"],
         "about": projectModalContents["COVID-19 Tracker"]
@@ -29,14 +29,14 @@ const projects = [
     {
         "title": "Breast Cancer Diagnosis (CNN)",
         "description": "Image recognition for Invasive Ductal Carcinoma",
-        "image": "/images/neural-network.jpg",
+        "image": `${process.env.PUBLIC_URL}/images/neural-network.jpg`,
         "carousel": [
-            "/images/neural-network.jpg",
-            "/images/idc-images.png",
-            "/images/cnn-accuracy-loss.png",
-            "/images/confusion-matrix.png",
-            "/images/feature-visualization-positive.png",
-            "/images/feature-visualization-negative.png",
+            `${process.env.PUBLIC_URL}/images/neural-network.jpg`,
+            `${process.env.PUBLIC_URL}/images/idc-images.png`,
+            `${process.env.PUBLIC_URL}/images/cnn-accuracy-loss.png`,
+            `${process.env.PUBLIC_URL}/images/confusion-matrix.png`,
+            `${process.env.PUBLIC_URL}/images/feature-visualization-positive.png`,
+            `${process.env.PUBLIC_URL}/images/feature-visualization-negative.png`,
         ],
         "tags": ["machine-learning"],
         "about": projectModalContents["Breast Cancer Diagnosis (CNN)"]
@@ -44,10 +44,10 @@ const projects = [
     {
         "title": "Breast Cancer Diagnosis (Decision Tree)",
         "description": "Predicts malignancy of a breast tumor with iOS app",
-        "image": "/images/decision-tree.png",
+        "image": `${process.env.PUBLIC_URL}/images/decision-tree.png`,
         "carousel": [
-            "/images/decision-tree.png",
-            "/images/decision-tree-mobile-app.png"
+            `${process.env.PUBLIC_URL}/images/decision-tree.png`,
+            `${process.env.PUBLIC_URL}/images/decision-tree-mobile-app.png`
         ],
         "tags": ["full-stack", "machine-learning", "front-end"],
         "about": projectModalContents["Breast Cancer Diagnosis (Decision Tree)"]
@@ -55,9 +55,9 @@ const projects = [
     {
         "title": "Automating Makerspace Sign-in",
         "description": "Facial/Speech recognition for detecting/signing-in members",
-        "image": "/images/makerspace-raspberry-pi.png",
+        "image": `${process.env.PUBLIC_URL}/images/makerspace-raspberry-pi.png`,
         "carousel": [
-            "/images/makerspace-raspberry-pi.png"
+            `${process.env.PUBLIC_URL}/images/makerspace-raspberry-pi.png`
         ],
         "tags": ["machine-learning"],
         "about": projectModalContents["Automating Makerspace Sign-in"]
@@ -65,13 +65,13 @@ const projects = [
     {
         "title": "Super Mario Bros",
         "description": "Recreated World 1-1 of the original Super Mario Bros. game",
-        "image": "/images/super-mario-bros.png",
+        "image": `${process.env.PUBLIC_URL}/images/super-mario-bros.png`,
         "carousel": [
-            "/images/super-mario-bros.png",
-            "/images/powerups.png",
-            "/images/hidden-blocks.png",
-            "/images/complete-level.png",
-            "/images/game-over.png"
+            `${process.env.PUBLIC_URL}/images/super-mario-bros.png`,
+            `${process.env.PUBLIC_URL}/images/powerups.png`,
+            `${process.env.PUBLIC_URL}/images/hidden-blocks.png`,
+            `${process.env.PUBLIC_URL}/images/complete-level.png`,
+            `${process.env.PUBLIC_URL}/images/game-over.png`
         ],
         "tags": ["front-end"],
         "about": projectModalContents["Super Mario Bros"]
@@ -79,9 +79,9 @@ const projects = [
     {
         "title": "Pokemon Team Planner",
         "description": "Determines strengths/weaknesses of your Pokemon team",
-        "image": "/images/pokemon-team-planner.png",
+        "image": `${process.env.PUBLIC_URL}/images/pokemon-team-planner.png`,
         "carousel": [
-            "/images/pokemon-team-planner.png"
+            `${process.env.PUBLIC_URL}/images/pokemon-team-planner.png`
         ],
         "tags": ["front-end"],
         "about": projectModalContents["Pokemon Team Planner"]
@@ -89,9 +89,9 @@ const projects = [
     {
         "title": "Flappy Bird",
         "description": "Recreated Flappy Bird",
-        "image": "/images/flappy-bird.png",
+        "image": `${process.env.PUBLIC_URL}/images/flappy-bird.png`,
         "carousel": [
-            "/images/flappy-bird.png"
+            `${process.env.PUBLIC_URL}/images/flappy-bird.png`
         ],
         "tags": ["front-end"],
         "about": projectModalContents["Flappy Bird"]
@@ -99,9 +99,9 @@ const projects = [
     {
         "title": "Vectors Visualized",
         "description": "Performs vector calculations. User can move vectors around",
-        "image": "/images/vector-program.png",
+        "image": `${process.env.PUBLIC_URL}/images/vector-program.png`,
         "carousel": [
-            "/images/vector-program.png"
+            `${process.env.PUBLIC_URL}/images/vector-program.png`
         ],
         "tags": ["front-end"],
         "about": projectModalContents["Vectors Visualized"]
