@@ -33,7 +33,7 @@ const Styles = styled.div`
 
 function App() {
   return (
-    <Router>
+    <Router basename={process.env.PUBLIC_URL}>
       <div>
         <Styles>
           <Navbar bg="dark" expand="lg">
