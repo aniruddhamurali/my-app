@@ -94,12 +94,12 @@ class Home extends Component {
     Sketch = (p) => {
         var network;
 
-        p.setup = () => { 
+        p.setup = () => {
             var w = window.innerWidth;
-            var h = window.innerHeight;
+            var windowH = window.innerHeight;
             p.createCanvas(window.innerWidth, window.innerHeight-300);
 
-            network = new Network(w/2, h/2 + 50);
+            network = new Network(w/2, windowH/2 + 50);
 
             var x1 = -w/8*2;
             var x2 = -w/8;
@@ -120,7 +120,7 @@ class Home extends Component {
             var e = new Neuron(x2, y4);
             var f = new Neuron(x2, y3);
             var g = new Neuron(x2, y2);
-            let h = new Neuron(x2, y1);
+            var h = new Neuron(x2, y1);
 
             var i = new Neuron(x3, y5);
             var j = new Neuron(x3, y4);
@@ -206,7 +206,7 @@ class Home extends Component {
         
         function recreateNetwork() {
             var w = window.innerWidth;
-            var h = window.innerHeight;
+            var windowH = window.innerHeight;
 
             var x1 = -w/8*2;
             var x2 = -w/8;
@@ -219,17 +219,17 @@ class Home extends Component {
             var y4 = y3 + 100;
             var y5 = y4 + 100;
 
-            network = new Network(w/2, h/2 + 50);
-            
+            network = new Network(w/2, windowH/2 + 50);
+
             var a = new Neuron(x1, y4);
             var b = new Neuron(x1, y3);
             var c = new Neuron(x1, y2)
-            
+
             var d = new Neuron(x2, y5);
             var e = new Neuron(x2, y4);
             var f = new Neuron(x2, y3);
             var g = new Neuron(x2, y2);
-            let h = new Neuron(x2, y1);
+            var h = new Neuron(x2, y1);
 
             var i = new Neuron(x3, y5);
             var j = new Neuron(x3, y4);
