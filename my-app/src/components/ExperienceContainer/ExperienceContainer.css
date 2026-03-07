@@ -1,7 +1,4 @@
-@import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
-
 .experiences {
-    /*background-color: #1a1a1d;*/
     background-color: black;
 }
 
@@ -12,4 +9,15 @@
     border-bottom: 2px solid white;
     width: max-content;
     margin: 0 auto;
+}
+
+.exp-list {
+    width: 70%;
+    margin: 0 auto;
+}
+
+@media (max-width: 992px) {
+    .exp-list {
+        width: 90%;
+    }
 }
