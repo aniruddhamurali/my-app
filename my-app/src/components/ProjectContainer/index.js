@@ -24,6 +24,9 @@ class ProjectContainer extends Component {
         $('#all').removeClass('active');
         $('#' + id).addClass('active');
 
+        $(".cardgroup").off("animationend", this.animationEndCallback);
+        $(".cardgroup").removeClass('animate');
+        void $(".cardgroup")[0].offsetWidth; // force reflow to restart animation
         $(".cardgroup").addClass('animate');
         $(".cardgroup").on("animationend", this.animationEndCallback);
     }
