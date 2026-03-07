@@ -2,6 +2,28 @@ import experienceModalContents from "./experienceModalContents";
 
 const experiences = [
     {
+        "name": "DoorDash",
+        "role": "Software Engineer",
+        "location": "San Francisco, CA",
+        "timeframe": "Sept 2024 - Present",
+        "image": `${process.env.PUBLIC_URL}/images/doordash.png`,
+        "carousel": [
+            `${process.env.PUBLIC_URL}/images/doordash.png`
+        ],
+        "about": experienceModalContents["DoorDash Sept 2024 - Present"]
+    },
+    {
+        "name": "Tremau",
+        "role": "Machine Learning Engineer Intern",
+        "location": "Remote (Paris, France)",
+        "timeframe": "Jan 2024 - May 2024",
+        "image": `${process.env.PUBLIC_URL}/images/tremau.png`,
+        "carousel": [
+            `${process.env.PUBLIC_URL}/images/tremau.png`
+        ],
+        "about": experienceModalContents["Tremau Jan 2024 - May 2024"]
+    },
+    {
         "name": "Amazon",
         "role": "Software Engineering Intern",
         "location": "Seattle, WA",
