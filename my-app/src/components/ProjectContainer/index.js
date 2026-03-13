@@ -83,7 +83,7 @@ class ProjectContainer extends Component {
                 </ButtonGroup>
                 </div>
                 <br></br>
-                <Row xs={1} sm={1} md={2} lg={3} className="g-4 cardgroup">
+                <Row xs={1} sm={1} md={2} lg={2} xl={3} className="g-4 cardgroup">
                     {shownProjects.map((item, index) => (
                         <Project
                             title={item["title"]}
