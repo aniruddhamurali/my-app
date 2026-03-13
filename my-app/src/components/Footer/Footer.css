@@ -75,14 +75,13 @@ a {
 }
 
 .category {
-    font-family: 'Poppins-Bold';
+    font-weight: 700;
     margin-bottom: 10px;
 }
 
 .footer-link {
     margin-bottom: 6px;
     color: #888;
-    font-family: 'Lato';
 }
 
 .footer-link a {

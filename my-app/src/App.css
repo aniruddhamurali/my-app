@@ -38,14 +38,8 @@
   }
 }
 
-@import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
-
 .navbar-brand {
-  font-family: 'Poppins-Bold';
-}
-
-.navbar-link {
-  font-family: 'Lato';
+  font-weight: 700;
 }
 
 .navbar .active {
@@ -56,72 +50,4 @@
 
 
 
-/**** FONTS ****/
-
-
-@font-face {
-  font-family: "Lato";
-  src: url("fonts/Lato-Regular.ttf");
-}
-
-@font-face {
-  font-family: "Lato-Bold";
-  src: url("fonts/Lato-Bold.ttf");
-}
-
-@font-face {
-  font-family: "Lato-Italic";
-  src: url("fonts/Lato-Italic.ttf");
-}
-
-@font-face {
-  font-family: "Lato-Black";
-  src: url("fonts/Lato-Black.ttf");
-}
-
-@font-face {
-  font-family: "Lato-Thin";
-  src: url("fonts/Lato-Thin.ttf");
-}
-
-@font-face {
-  font-family: "Lato-Light";
-  src: url("fonts/Lato-Light.ttf");
-}
-
-/*
-img {
-  object-fit: cover;
-  border-radius: 50%;
-  width: 250px;
-  height: 250px;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}*/
-
-@font-face {
-  font-family: 'Poppins';
-  src: url('fonts/Poppins-Regular.ttf') format('truetype');
-}
-
-@font-face {
-  font-family: 'Poppins-Black';
-  src: url('fonts/Poppins-Black.ttf') format('truetype');
-}
-
-@font-face {
-  font-family: 'Poppins-Bold';
-  src: url('fonts/Poppins-Bold.ttf') format('truetype');
-}
-
-@font-face {
-  font-family: 'Poppins-Light';
-  src: url('fonts/Poppins-Light.ttf') format('truetype');
-}
-
-@font-face {
-  font-family: 'Poppins-Thin';
-  src: url('fonts/Poppins-Thin.ttf') format('truetype');
-}
 

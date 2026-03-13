@@ -25,13 +25,12 @@
 .header {
     text-align: center;
     color: white;
-    font-family: "Poppins";
+    font-weight: 700;
 }
 
 .buttongroup {
     display: block;
     margin: auto 0;
-    font-family: "Lato";
 }
 
 .buttongroupdiv {

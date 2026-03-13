@@ -51,16 +51,12 @@
 }
 
 .modal-title {
-    font-family: 'Lato-Black';
+    font-weight: 900;
 }
 
 .modal-body h5 {
-    font-family: 'Lato-Bold';
+    font-weight: 700;
     margin-bottom: 10px;
-}
-
-.modal-body p, .modal-body li {
-    font-family: 'Lato';
 }
 
 .modal-footer {
@@ -73,7 +69,6 @@
 }
 
 .modal-section a {
-    font-family: 'Lato';
     font-weight: bold;
     color: #30B2FF;
     text-decoration: none;
