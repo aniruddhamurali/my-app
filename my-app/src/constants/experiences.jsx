@@ -68,18 +68,6 @@ const experiences = [
         "about": experienceModalContents["Capital One Jun 2021 - Aug 2021"]
     },
     {
-        "name": "Bits of Good",
-        "role": "Web Developer",
-        "location": "Atlanta, GA",
-        "timeframe": "Aug 2020 - Dec 2020",
-        "image": `${process.env.PUBLIC_URL}/images/bits-of-good.jpg`,
-        "carousel": [
-            `${process.env.PUBLIC_URL}/images/general-solution-1.png`,
-            `${process.env.PUBLIC_URL}/images/general-solution-2.png`,
-        ],
-        "about": experienceModalContents["Bits of Good Aug 2020 - Dec 2020"]
-    },
-    {
         "name": "Georgia Tech",
         "role": "Research Assistant, Dr. Jacob Abernethy",
         "location": "Atlanta, GA",
@@ -90,6 +78,18 @@ const experiences = [
             `${process.env.PUBLIC_URL}/images/covidforecasts-topforecasts.png`,
         ],
         "about": experienceModalContents["Georgia Tech Jun 2020 - Apr 2021"]
+    },
+    {
+        "name": "Bits of Good",
+        "role": "Web Developer",
+        "location": "Atlanta, GA",
+        "timeframe": "Aug 2020 - Dec 2020",
+        "image": `${process.env.PUBLIC_URL}/images/bits-of-good.jpg`,
+        "carousel": [
+            `${process.env.PUBLIC_URL}/images/general-solution-1.png`,
+            `${process.env.PUBLIC_URL}/images/general-solution-2.png`,
+        ],
+        "about": experienceModalContents["Bits of Good Aug 2020 - Dec 2020"]
     },
     {
         "name": "Yale School of Medicine",
