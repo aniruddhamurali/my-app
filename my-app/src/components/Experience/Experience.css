@@ -6,7 +6,7 @@
     border-left: 3px solid #30B2FF;
     border-radius: 8px;
     padding: 20px 24px;
-    margin-bottom: 14px;
+    margin-bottom: 0;
     cursor: pointer;
     transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
