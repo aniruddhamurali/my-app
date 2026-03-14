@@ -1,12 +1,12 @@
 .experiences {
-    background-color: black;
+    background-color: #f4f6f9;
 }
 
 .header {
     text-align: center;
-    color: white;
+    color: #111;
     font-weight: 900;
-    border-bottom: 2px solid white;
+    border-bottom: 2px solid #111;
     width: max-content;
     margin: 0 auto;
 }

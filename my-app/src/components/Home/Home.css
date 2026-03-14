@@ -1,3 +1,9 @@
+.hero-section {
+    min-height: 100vh;
+    background-color: black;
+    overflow: hidden;
+}
+
 #canvastext {
     font-size: 48px;
     text-align: center;

@@ -1,7 +1,8 @@
 .exp-card {
     display: flex;
     align-items: center;
-    background-color: #111;
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
     border-left: 3px solid #30B2FF;
     border-radius: 8px;
     padding: 20px 24px;
@@ -11,7 +12,7 @@
 }
 
 .exp-card:hover {
-    box-shadow: 0 4px 24px rgba(48, 178, 255, 0.3);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
     transform: translateX(5px);
 }
 
@@ -19,7 +20,7 @@
     flex-shrink: 0;
     width: 72px;
     height: 72px;
-    background-color: white;
+    background-color: #f0f2f5;
     border-radius: 8px;
     display: flex;
     align-items: center;
@@ -41,7 +42,7 @@
 
 .exp-company {
     font-weight: 700;
-    color: white;
+    color: #111;
     margin-bottom: 2px;
 }
 
@@ -52,7 +53,7 @@
 }
 
 .exp-location {
-    color: #888;
+    color: #6b7280;
     font-size: 0.875rem;
 }
 
@@ -63,7 +64,7 @@
 }
 
 .exp-timeframe {
-    color: #888;
+    color: #6b7280;
     font-size: 0.875rem;
     white-space: nowrap;
 }

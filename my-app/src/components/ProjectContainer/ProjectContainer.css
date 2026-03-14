@@ -1,5 +1,5 @@
 .projectcontainer {
-    background-color: black;
+    background-color: #ffffff;
 }
 
 .cardgroup {
@@ -24,7 +24,7 @@
 
 .header {
     text-align: center;
-    color: white;
+    color: #111;
     font-weight: 700;
 }
 
@@ -41,17 +41,20 @@
     font-weight: bold;
     padding-left: 20px;
     padding-right: 20px;
-    background-color: #1a1a1d;
+    background-color: #ffffff;
     border-color: #30B2FF;
+    color: #111;
 }
 
 .button:hover {
-    background-color: #1a1a1d;
+    background-color: #f0f8ff;
+    color: #111;
 }
 
 .active {
     background-color: #30B2FF !important;
     border-color: #30B2FF !important;
+    color: #ffffff !important;
 }
 
 .active:focus {

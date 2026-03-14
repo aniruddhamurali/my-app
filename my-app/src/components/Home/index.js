@@ -97,7 +97,8 @@ class Home extends Component {
         p.setup = () => {
             var w = window.innerWidth;
             var windowH = window.innerHeight;
-            p.createCanvas(window.innerWidth, window.innerHeight-300);
+            var textH = document.getElementById('canvastext').offsetHeight;
+            p.createCanvas(window.innerWidth, window.innerHeight - textH);
 
             network = new Network(w/2, windowH/2 + 50);
 
@@ -324,7 +325,8 @@ class Home extends Component {
         }
 
         p.windowResized = () => {
-            p.resizeCanvas(window.innerWidth, window.innerHeight-300);
+            var textH = document.getElementById('canvastext').offsetHeight;
+            p.resizeCanvas(window.innerWidth, window.innerHeight - textH);
             recreateNetwork();
         }
 
@@ -454,10 +456,12 @@ class Home extends Component {
     render() {
         return (
             <div>
+                <div className="hero-section">
                 <div id="canvastext">
                     CREATING CREATIVE, IMPACTFUL TECHNOLOGIES
                 </div>
                 <div className="animation" ref={this.myRef}></div>
+                </div>
                 <IntroContainer></IntroContainer>
                 <ExperienceContainer></ExperienceContainer>
                 <ProjectContainer></ProjectContainer>

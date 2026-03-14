@@ -1,6 +1,6 @@
 .project-card {
-    background-color: #111 !important;
-    border: 1px solid #222 !important;
+    background-color: #ffffff !important;
+    border: 1px solid #e2e8f0 !important;
     border-radius: 12px !important;
     overflow: hidden;
     cursor: pointer;
@@ -9,7 +9,7 @@
 
 .project-card:hover {
     transform: translateY(-4px);
-    box-shadow: 0 12px 32px rgba(48, 178, 255, 0.2) !important;
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.1) !important;
 }
 
 .project-card-img {
@@ -26,7 +26,7 @@
 .project-card-title {
     font-size: 1.05rem;
     font-weight: 700;
-    color: #fff;
+    color: #111;
     margin-bottom: 10px;
 }
 
@@ -51,7 +51,7 @@
 
 .project-card-desc {
     font-size: 0.875rem;
-    color: #aaa;
+    color: #555;
     line-height: 1.55;
     margin-bottom: 0;
 }

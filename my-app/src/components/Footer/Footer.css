@@ -2,8 +2,8 @@ footer {
     left: 0;
     bottom: 0;
     width: 100%;
-    background-color: #0f0f0f;
-    color: white;
+    background-color: #f0f2f5;
+    color: #111;
     text-align: center;
     align-items: center;
     padding-top: 20px;
@@ -26,10 +26,9 @@ footer {
     color: #00acee;
 }
 .fa-envelope {
-    color: white;
+    color: #374151;
     margin-left: 5px;
     margin-top: 5px;
-    color: rgb(200, 200, 200);
 }
 .fab {
     margin: 5px;
@@ -81,7 +80,7 @@ a {
 
 .footer-link {
     margin-bottom: 6px;
-    color: #888;
+    color: #6b7280;
 }
 
 .footer-link a {
