@@ -25,14 +25,7 @@ class Footer extends Component {
                                 <div className="footer-link"><a href="#Projects">Projects</a></div>
                             </Stack>
                         </Col>
-                        <Col xs={12} sm={12} md={2} lg={2} className="col left">
-                            <Stack gap={1}>
-                                <div className="category">PROJECTS</div>
-                                <div className="footer-link">CovidForecasts</div>
-                                <div className="footer-link">COVID-Tracker</div>
-                            </Stack>
-                        </Col>
-                        <Col xs={12} sm={12} md={2} lg={2} className="col left">
+<Col xs={12} sm={12} md={2} lg={2} className="col left">
                             <Stack gap={1}>
                                 <div className="category">OTHER</div>
                                 <div className="footer-link">Blog</div>

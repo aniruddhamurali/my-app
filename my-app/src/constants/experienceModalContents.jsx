@@ -3,6 +3,71 @@ import {faLink, faCode} from '@fortawesome/free-solid-svg-icons';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 
 const experienceModalContents = {
+    "DoorDash Sept 2024 - Present": (
+        <div className="modal-section">
+            <h5>What I Did</h5>
+            <ul>
+                <li>
+                    Implemented key features for the Dasher (delivery driver) App used at grocery and retail stores in Kotlin:
+                    <ul>
+                        <li>
+                         <strong>Costco entry and checkout barcodes for Dashers</strong> - rolled out in Australia, enabling ~$1M annual gross order value (GOV).
+                        </li>
+                        <li>
+                        <strong>Request a SKU</strong> - Feature that enables customers to request items not listed on the DoorDash app; Owned development for 2 key components (shopping list and item details); 75% of such items are fulfilled, double the expected fulfillment rate.
+                        </li>
+                        <li>
+                        <strong>Fraud-triggered order-cancellation</strong> - Cancels batch order when customer payment fraud is detected, saving ~$600k a year.
+                        </li>
+                        <li>
+                        <strong>Smart prompt optimization</strong> - Send Dashers prompts to take high quality photos of items only once per store per item, reusing uploaded images across Dashers for 16+ weeks, eliminating redundant prompts and improving Dasher experience.
+                        </li>
+                        <li>
+                        <strong>iOS barcode caching</strong> - Enables barcode scanning with near-zero latency for 1M+ scans per day; Self-taught Swift
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    Authored RFCs and one-pagers for key initiatives (Request a SKU, Smart Prompting, barcode caching) and an on-call runbook to simplify API latency burn investigations, driving product clarity and operational efficiency.
+                </li>
+                <li>
+                    Presented tech talk about best unit testing practices and led initiatives to improve unit testing across the team.
+                </li>
+                <li>
+                    Led team of 7 engineers in AI hackathon team to integrate RFCs, Jira tickets, PR metadata into LLM-based PR reviews.
+                </li>
+            </ul>
+            <hr></hr>
+        </div>
+    ),
+    "Tremau Jan 2024 - May 2024": (
+        <div className="modal-section">
+            <h5>What I Did</h5>
+            <ul>
+                <li>
+                    Built large language models (LLM) to assess how content may violate a social platform’s guidelines (hate speech, doxing, etc.) with Python, LangChain, Pandas, Numpy, Pinecone.
+                </li>
+                <li>
+                    Researched generative AI methods in content moderation and implemented retrieval augmented generation (RAG), k-NN, and synthetic data generation with Dr. Theodoros Evgeniou (INSEAD & BCG advisor)
+                </li>
+            </ul>
+            <hr></hr>
+        </div>
+    ),
+    "Amazon May 2023 - Aug 2023": (
+        <div className="modal-section">
+            <h5>What I Did</h5>
+            <ul>
+                <li>
+                    Developed Sietch, a data load-balancing backend service built in Java that interacts with various AWS network services and implements event streaming to send over 50 million metrics per second to a Kafka queue to fan-out to services; potentially saves $28k per month, a 47% reduction in cost.
+                </li>
+                <li>
+                    Wrote Smithy model that defines service operations, data structures, variables, and HTTP bindings to implement type-safety, helping Sietch to be more secure and efficient. Self-taught multiple internal technologies such as Coral and Smithy.
+                </li>
+            </ul>
+            <hr></hr>
+        </div>
+    ),
     "Goldman Sachs Jun 2022 - Aug 2022": (
         <div>
             <div className="modal-section">

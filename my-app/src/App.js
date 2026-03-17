@@ -1,6 +1,6 @@
 import './App.css';
 
-import React from 'react';
+import React, { useState } from 'react';
 import {
   BrowserRouter as Router,
   Routes,
@@ -32,6 +32,14 @@ const Styles = styled.div`
 `;
 
 function App() {
+  const [activeLink, setActiveLink] = useState(null);
+
+  const navTo = (id) => {
+    document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+    window.history.pushState({}, '', '/' + id);
+    setActiveLink(id);
+  };
+
   return (
     <Router>
       <div>
@@ -43,13 +51,10 @@ function App() {
               <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="me-auto">
                   <Nav.Item>
-                    <Nav.Link href="/">Home</Nav.Link>
+                    <Nav.Link active={activeLink === 'Experience'} onClick={(e) => { e.preventDefault(); navTo('Experience'); }}>Experience</Nav.Link>
                   </Nav.Item>
                   <Nav.Item>
-                    <Nav.Link onClick={(e) => { e.preventDefault(); document.getElementById('Experience').scrollIntoView({ behavior: 'smooth' }); window.history.pushState({}, '', '/Experience'); }} href="#">Experience</Nav.Link>
-                  </Nav.Item>
-                  <Nav.Item>
-                    <Nav.Link onClick={(e) => { e.preventDefault(); document.getElementById('Projects').scrollIntoView({ behavior: 'smooth' }); window.history.pushState({}, '', '/Projects'); }} href="#">Projects</Nav.Link>
+                    <Nav.Link active={activeLink === 'Projects'} onClick={(e) => { e.preventDefault(); navTo('Projects'); }}>Projects</Nav.Link>
                   </Nav.Item>
                 </Nav>
               </Navbar.Collapse>
