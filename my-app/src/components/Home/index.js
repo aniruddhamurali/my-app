@@ -458,7 +458,7 @@ class Home extends Component {
             <div>
                 <div className="hero-section">
                 <div id="canvastext">
-                    CREATING CREATIVE, IMPACTFUL TECHNOLOGIES
+                    CREATING INNOVATIVE, IMPACTFUL TECHNOLOGIES
                 </div>
                 <div className="animation" ref={this.myRef}></div>
                 </div>

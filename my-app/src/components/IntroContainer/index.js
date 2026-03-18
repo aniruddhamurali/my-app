@@ -17,10 +17,10 @@ class IntroContainer extends Component {
                     <Col className="introText" xs={12} md={5}>
                         <h2 className="introWelcome">Welcome to my website!</h2>
                         <h5>
-                            I'm currently a computer science student at 
-                            Georgia Tech with specializations in AI and People. My mission is to 
-                            create technologies that have real-world impact. Here's my background 
-                            and experience that got me to where I am today:
+                            I'm Aniruddha, a software engineer based in San Francisco who is experienced in delivering scalable backend systems and intelligent product features 
+                            and is passionate about building software that combines engineering excellence with measurable business impact. I'm interested in various areas
+                            such as AI/ML, full-stack development, and databases.
+
                         </h5>
                     </Col>
                 </Row>

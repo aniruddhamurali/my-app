@@ -93,7 +93,7 @@ const experiences = [
     },
     {
         "name": "Yale School of Medicine",
-        "role": "Research Intern, Dr. Elizbaeth Jonas",
+        "role": "Research Intern, Dr. Elizabeth Jonas",
         "location": "New Haven, CT",
         "timeframe": "May 2019 - Jun 2019",
         "image": `${process.env.PUBLIC_URL}/images/Yale-School-of-Medicine.png`,
